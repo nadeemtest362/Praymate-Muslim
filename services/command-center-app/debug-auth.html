@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Auth Storage</title>
+</head>
+<body>
+    <h1>Command Center Auth Debug</h1>
+    <p>Open this file in your browser while on the Command Center to see what's in localStorage</p>
+    
+    <h2>LocalStorage Keys:</h2>
+    <pre id="keys"></pre>
+    
+    <h2>Auth Token Data:</h2>
+    <pre id="auth"></pre>
+    
+    <script>
+        // Show all localStorage keys
+        const keys = Object.keys(localStorage).sort();
+        document.getElementById('keys').textContent = JSON.stringify(keys, null, 2);
+        
+        // Check for auth-related keys
+        const authKeys = keys.filter(k => 
+            k.includes('auth') || 
+            k.includes('supabase') || 
+            k.includes('sb-') ||
+            k.includes('command-center')
+        );
+        
+        const authData = {};
+        authKeys.forEach(key => {
+            try {
+                const value = localStorage.getItem(key);
+                authData[key] = value ? JSON.parse(value) : value;
+            } catch (e) {
+                authData[key] = localStorage.getItem(key);
+            }
+        });
+        
+        document.getElementById('auth').textContent = JSON.stringify(authData, null, 2);
+        
+        // Also check sessionStorage
+        console.log('SessionStorage keys:', Object.keys(sessionStorage));
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+    "mcpServers": {
+      "supabase-praymate": {
+          "type": "stdio",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@supabase/mcp-server-supabase@latest",
+    
+          "--project-ref=kfrvxoxdehduqrpcbibl"
+        ],
+        "env": {
+          "SUPABASE_ACCESS_TOKEN": "sbp_8b080976b944e5c2a19dd4d400e8b62efdfc445b"
+        }
+      }
+    }
+  }
+  

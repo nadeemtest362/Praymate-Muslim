@@ -1,0 +1,26 @@
+{
+  "screenType": "IntentionAddedConfirmationScreen",
+  "description": "Displays a confirmation message after an intention is successfully added during onboarding.",
+  "configSchema": {
+    "title": "string",
+    "infoText": "string",
+    "doneButton": {
+      "text": "string",
+      "action": "string" 
+    },
+    "tracking": {
+      "screenViewEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "title": "prayer intention added ✨",
+    "infoText": "This intention will be part of your upcoming prayers.",
+    "doneButton": {
+      "text": "Awesome!",
+      "action": "NAVIGATE_NEXT_ONBOARDING_STEP" 
+    },
+    "tracking": {
+      "screenViewEvent": "onboarding_intention_confirmation_viewed"
+    }
+  }
+} 

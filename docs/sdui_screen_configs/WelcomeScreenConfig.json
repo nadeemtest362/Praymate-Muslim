@@ -1,0 +1,132 @@
+{
+  "screenType": "WelcomeScreen",
+  "description": "Configuration for the initial welcome screen with logo, rotating verse, and motivation question.",
+  "configSchema": {
+    "logoScreen": {
+      "logoText": "string",
+      "logoAccent": "string",
+      "logoEmoji": "string"
+    },
+    "verseScreen": {
+      "verses": [
+        {
+          "text": "string",
+          "reference": "string",
+          "theme": "string"
+        }
+      ],
+      "themePrefix": "string"
+    },
+    "questionScreen": {
+      "greeting": "string",
+      "question": "string",
+      "options": [
+        {
+          "id": "string",
+          "text": "string",
+          "emoji": "string",
+          "action": "string",
+          "navigateTo": "string"
+        }
+      ]
+    },
+    "timers": {
+      "logoToVerseDelay": "number",
+      "verseDisplayDuration": "number"
+    }
+  },
+  "exampleConfig": {
+    "logoScreen": {
+      "logoText": "personal",
+      "logoAccent": "prayers",
+      "logoEmoji": "🙏"
+    },
+    "verseScreen": {
+      "verses": [
+        {
+          "text": "Pray without ceasing.",
+          "reference": "1 Thessalonians 5:17",
+          "theme": "constant connection"
+        },
+        {
+          "text": "The Lord is near to all who call on him in truth.",
+          "reference": "Psalm 145:18",
+          "theme": "divine closeness"
+        },
+        {
+          "text": "Ask and you will receive.",
+          "reference": "Matthew 21:22",
+          "theme": "faithful asking"
+        },
+        {
+          "text": "The prayer of a righteous person has great power.",
+          "reference": "James 5:16",
+          "theme": "prayer power"
+        },
+        {
+          "text": "Call to me and I will answer you.",
+          "reference": "Jeremiah 33:3",
+          "theme": "God's response"
+        },
+        {
+          "text": "Be joyful in hope, patient in affliction, faithful in prayer.",
+          "reference": "Romans 12:12",
+          "theme": "persistent faith"
+        }
+      ],
+      "themePrefix": "on "
+    },
+    "questionScreen": {
+      "greeting": "welcome to {APP_LOGO}",
+      "question": "welcome to {APP_LOGO} — what brings you here today?",
+      "options": [
+        {
+          "id": "consistency",
+          "text": "I want to pray more, but I keep getting distracted",
+          "emoji": "⏰",
+          "action": "set_initial_motivation_and_navigate",
+          "navigateTo": "/onboarding/understanding-validation"
+        },
+        {
+          "id": "personalization",
+          "text": "I struggle to find the right words when I pray",
+          "emoji": "🎯",
+          "action": "set_initial_motivation_and_navigate",
+          "navigateTo": "/onboarding/understanding-validation"
+        },
+        {
+          "id": "closer",
+          "text": "I miss feeling connected to God",
+          "emoji": "🤲",
+          "action": "set_initial_motivation_and_navigate",
+          "navigateTo": "/onboarding/understanding-validation"
+        },
+        {
+          "id": "restart",
+          "text": "I'm trying to rebuild my faith journey",
+          "emoji": "🔄",
+          "action": "set_initial_motivation_and_navigate",
+          "navigateTo": "/onboarding/understanding-validation"
+        },
+        {
+          "id": "intercession",
+          "text": "I carry others in my heart but rarely pray for them",
+          "emoji": "👥",
+          "action": "set_initial_motivation_and_navigate",
+          "navigateTo": "/onboarding/understanding-validation"
+        },
+        {
+          "id": "inspiration",
+          "text": "My spiritual life feels dry and routine",
+          "emoji": "✨",
+          "action": "set_initial_motivation_and_navigate",
+          "navigateTo": "/onboarding/understanding-validation"
+        }
+      ]
+    },
+    "timers": {
+      "logoToVerseDelay": 2500,
+      "verseDisplayDuration": 5000
+    }
+  }
+} 

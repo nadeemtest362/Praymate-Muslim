@@ -1,0 +1,96 @@
+{
+  "screenType": "PrayerSlideshowScreen",
+  "description": "Enhanced prayer display with slideshow mechanics, smooth transitions, and faith-specific visual elements.",
+  "configSchema": {
+    "title": "string",
+    "backgroundGradient": ["string"],
+    "slideshow": {
+      "enableSwipeNavigation": "boolean",
+      "showPaginationDots": "boolean",
+      "autoProgress": "boolean",
+      "progressDuration": "number",
+      "transitionType": "string"
+    },
+    "typography": {
+      "titleFontSize": "number",
+      "contentFontSize": "number",
+      "lineHeight": "number",
+      "letterSpacing": "number",
+      "alignment": "string"
+    },
+    "faithElements": {
+      "enabled": "boolean",
+      "style": "string",
+      "position": "string",
+      "opacity": "number"
+    },
+    "animations": {
+      "textFadeIn": "boolean",
+      "backgroundAnimations": "boolean",
+      "particleEffects": "boolean"
+    },
+    "controls": {
+      "showProgress": "boolean",
+      "showBackButton": "boolean",
+      "showShareButton": "boolean",
+      "autoHideDelay": "number"
+    },
+    "sharing": {
+      "enabled": "boolean",
+      "includeAttribution": "boolean",
+      "customMessage": "string"
+    },
+    "tracking": {
+      "screenViewEvent": "string",
+      "slideViewedEventPrefix": "string",
+      "completedReadingEvent": "string",
+      "shareAttemptedEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "title": "Your {timeOfDay} Prayer",
+    "backgroundGradient": ["#1A1B4B", "#2D1B69", "#4A4E83", "#6B7DB8"],
+    "slideshow": {
+      "enableSwipeNavigation": true,
+      "showPaginationDots": true,
+      "autoProgress": false,
+      "progressDuration": 8000,
+      "transitionType": "fade"
+    },
+    "typography": {
+      "titleFontSize": 28,
+      "contentFontSize": 18,
+      "lineHeight": 1.6,
+      "letterSpacing": 0.5,
+      "alignment": "center"
+    },
+    "faithElements": {
+      "enabled": true,
+      "style": "subtle",
+      "position": "background",
+      "opacity": 0.1
+    },
+    "animations": {
+      "textFadeIn": true,
+      "backgroundAnimations": true,
+      "particleEffects": false
+    },
+    "controls": {
+      "showProgress": true,
+      "showBackButton": true,
+      "showShareButton": true,
+      "autoHideDelay": 3000
+    },
+    "sharing": {
+      "enabled": true,
+      "includeAttribution": true,
+      "customMessage": "✨ From Just Pray"
+    },
+    "tracking": {
+      "screenViewEvent": "prayer_slideshow_viewed",
+      "slideViewedEventPrefix": "prayer_slide_",
+      "completedReadingEvent": "prayer_reading_completed",
+      "shareAttemptedEvent": "prayer_share_attempted"
+    }
+  }
+} 

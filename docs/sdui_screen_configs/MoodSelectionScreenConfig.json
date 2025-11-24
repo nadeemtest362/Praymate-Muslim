@@ -1,0 +1,104 @@
+{
+  "screenType": "MoodSelectionScreen",
+  "description": "Configuration for the screen where users select their current mood.",
+  "configSchema": {
+    "logo": {
+      "text": "string",
+      "accent": "string",
+      "emoji": "string"
+    },
+    "title": "string",
+    "subtitle": "string",
+    "moodOptions": [
+      {
+        "id": "string",
+        "emoji": "string",
+        "label": "string"
+      }
+    ],
+    "navigation": {
+      "action": "string",
+      "navigateTo": "string",
+      "params": {}
+    },
+    "tracking": {
+      "screenViewEvent": "string",
+      "moodSelectedEventPrefix": "string"
+    }
+  },
+  "exampleConfig": {
+    "logo": {
+      "text": "just",
+      "emoji": "🙏",
+      "accent": "pray"
+    },
+    "title": " 🫥  how are you feeling?",
+    "subtitle": "Share your current mood to personalize your first prayer",
+    "tracking": {
+      "screenViewEvent": "onboarding_mood_viewed",
+      "moodSelectedEventPrefix": "onboarding_mood_selected_"
+    },
+    "navigation": {
+      "action": "NAVIGATE_WITH_PARAMS",
+      "params": {
+        "moodId": "id",
+        "moodEmoji": "emoji",
+        "moodLabel": "label"
+      },
+      "navigateTo": "/onboarding/mood-context"
+    },
+    "moodOptions": [
+      {
+        "id": "grateful",
+        "emoji": "🙏",
+        "label": "Grateful"
+      },
+      {
+        "id": "joyful",
+        "emoji": "😊",
+        "label": "Joyful"
+      },
+      {
+        "id": "peaceful",
+        "emoji": "😌",
+        "label": "Peaceful"
+      },
+      {
+        "id": "hopeful",
+        "emoji": "✨",
+        "label": "Hopeful"
+      },
+      {
+        "id": "anxious",
+        "emoji": "😟",
+        "label": "Anxious"
+      },
+      {
+        "id": "sad",
+        "emoji": "😢",
+        "label": "Sad"
+      },
+      {
+        "id": "overwhelmed",
+        "emoji": "😩",
+        "label": "Overwhelmed"
+      },
+      {
+        "id": "lonely",
+        "emoji": "🥀",
+        "label": "Lonely"
+      },
+      {
+        "id": "confused",
+        "emoji": "🌫️",
+        "label": "Confused"
+      },
+      {
+        "id": "angry",
+        "emoji": "😠",
+        "label": "Angry"
+      }
+    ]
+  }
+  
+} 

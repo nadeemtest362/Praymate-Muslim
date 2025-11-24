@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check and Create Tables</title>
+</head>
+<body>
+    <h1>Database Setup</h1>
+    <div id="output"></div>
+
+    <script type="module">
+        import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
+        
+        const supabaseUrl = 'https://molydcrzwsoeyqkiofwe.supabase.co'
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1vbHlkY3J6d3NvZXlxa2lvZndlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM5Mzk5NjMsImV4cCI6MjA0OTUxNTk2M30.9BEFdJDkkgU6aPMmgV1YJ5fMxdntyZzOQl_9CvbEKJg'
+        
+        const supabase = createClient(supabaseUrl, supabaseKey)
+        
+        const output = document.getElementById('output')
+        
+        function log(message) {
+            output.innerHTML += message + '<br>'
+            console.log(message)
+        }
+        
+        async function checkDatabase() {
+            log('🔍 Checking database status...')
+            
+            // Check if tiktok_accounts table exists and what columns it has
+            try {
+                log('📊 Checking tiktok_accounts table...')
+                const { data, error } = await supabase
+                    .from('tiktok_accounts')
+                    .select('*')
+                    .limit(1)
+                
+                if (error) {
+                    log('❌ tiktok_accounts error: ' + error.message)
+                } else {
+                    log('✅ tiktok_accounts table exists')
+                    if (data && data.length > 0) {
+                        const columns = Object.keys(data[0])
+                        log('📋 Columns: ' + columns.join(', '))
+                        
+                        if (columns.includes('metadata')) {
+                            log('✅ metadata column exists')
+                        } else {
+                            log('❌ metadata column missing')
+                        }
+                    }
+                }
+            } catch (e) {
+                log('❌ Exception checking tiktok_accounts: ' + e.message)
+            }
+            
+            // Check if tiktok_videos table exists
+            try {
+                log('📊 Checking tiktok_videos table...')
+                const { data, error } = await supabase
+                    .from('tiktok_videos')
+                    .select('*')
+                    .limit(1)
+                
+                if (error) {
+                    log('❌ tiktok_videos error: ' + error.message)
+                } else {
+                    log('✅ tiktok_videos table exists')
+                }
+            } catch (e) {
+                log('❌ Exception checking tiktok_videos: ' + e.message)
+            }
+            
+            log('🏁 Database check completed!')
+            log('')
+            log('📝 To fix the issues, run this SQL in Supabase Dashboard:')
+            log('👉 https://supabase.com/dashboard/project/molydcrzwsoeyqkiofwe/sql')
+            log('')
+            log('-- Add metadata column:')
+            log('ALTER TABLE tiktok_accounts ADD COLUMN IF NOT EXISTS metadata JSONB DEFAULT \'{}\';')
+            log('')
+            log('-- Create tiktok_videos table:')
+            log('CREATE TABLE IF NOT EXISTS tiktok_videos (')
+            log('  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,')
+            log('  account_id UUID REFERENCES tiktok_accounts(id) ON DELETE CASCADE,')
+            log('  tiktok_video_id TEXT NOT NULL,')
+            log('  caption TEXT,')
+            log('  video_url TEXT,')
+            log('  cover_url TEXT,')
+            log('  duration INTEGER DEFAULT 0,')
+            log('  created_at_tiktok TIMESTAMPTZ,')
+            log('  stats JSONB DEFAULT \'{}\',')
+            log('  share_url TEXT,')
+            log('  created_at TIMESTAMPTZ DEFAULT NOW(),')
+            log('  updated_at TIMESTAMPTZ DEFAULT NOW(),')
+            log('  UNIQUE(account_id, tiktok_video_id)')
+            log(');')
+            log('')
+            log('ALTER TABLE tiktok_videos ENABLE ROW LEVEL SECURITY;')
+            log('CREATE POLICY "Allow all operations on tiktok_videos for authenticated users" ON tiktok_videos FOR ALL USING (true);')
+        }
+        
+        checkDatabase()
+    </script>
+</body>
+</html>

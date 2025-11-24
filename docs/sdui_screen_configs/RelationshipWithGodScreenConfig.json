@@ -1,0 +1,47 @@
+{
+  "exampleConfig": {
+    "question": "How would you describe your relationship with God right now?",
+    "options": [
+      {
+        "id": "very_close",
+        "text": "I feel deeply connected to God every day",
+        "emoji": "🥰",
+        "action": "SAVE_RESPONSE_AND_NAVIGATE_NEXT",
+        "responseValue": "very_close"
+      },
+      {
+        "id": "close",
+        "text": "Good, but I'd like to be closer",
+        "emoji": "😌",
+        "action": "SAVE_RESPONSE_AND_NAVIGATE_NEXT",
+        "responseValue": "close"
+      },
+      {
+        "id": "its_complicated",
+        "text": "It varies from day to day",
+        "emoji": "🤔",
+        "action": "SAVE_RESPONSE_AND_NAVIGATE_NEXT",
+        "responseValue": "complicated"
+      },
+      {
+        "id": "distant",
+        "text": "We've grown apart, but I want to reconnect",
+        "emoji": "😔",
+        "action": "SAVE_RESPONSE_AND_NAVIGATE_NEXT",
+        "responseValue": "distant"
+      },
+      {
+        "id": "rebuilding",
+        "text": "Working on rebuilding our connection",
+        "emoji": "🌱",
+        "action": "SAVE_RESPONSE_AND_NAVIGATE_NEXT",
+        "responseValue": "rebuilding"
+      }
+    ],
+    "tracking": {
+      "screenViewEvent": "onboarding_relationship_with_god_screen_viewed",
+      "optionSelectedEventPrefix": "onboarding_relationship_with_god_option_"
+    },
+    "questionType": "relationshipWithGod"
+  }
+} 

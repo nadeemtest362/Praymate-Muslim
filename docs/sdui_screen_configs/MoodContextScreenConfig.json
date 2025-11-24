@@ -1,0 +1,89 @@
+{
+  "screenType": "MoodContextScreen",
+  "description": "Configuration for the screen where users provide textual context for their selected mood.",
+  "configSchema": {
+    "titleTemplate": {
+      "part1": "string",
+      "part2": "string",
+      "moodLabelPlaceholder": "string"
+    },
+    "inputField": {
+      "placeholder": "string",
+      "maxLength": "number",
+      "charCountFormat": "string"
+    },
+    "continueButton": {
+      "text": "string",
+      "action": "string",
+      "navigateTo": "string"
+    },
+    "skipButton": {
+      "text": "string",
+      "action": "string",
+      "navigateTo": "string"
+    },
+    "tracking": {
+      "screenViewEvent": "string",
+      "contextProvidedEvent": "string",
+      "contextSkippedEvent": "string"
+    },
+    "errorMessages": {
+        "missingMoodInfo": "string"
+    },
+    "moodSpecificPrompts": {
+      "peaceful": "string",
+      "grateful": "string",
+      "joyful": "string",
+      "hopeful": "string",
+      "content": "string",
+      "blessed": "string",
+      "anxious": "string",
+      "weary": "string",
+      "overwhelmed": "string",
+      "seeking": "string"
+    }
+  },
+  "exampleConfig": {
+    "titleTemplate": {
+      "part1": "what's bringing you to feel ",
+      "part2": " in this moment?",
+      "moodLabelPlaceholder": "this way"
+    },
+    "inputField": {
+      "placeholder": "Share what's on your heart... God hears your thoughts",
+      "maxLength": 180,
+      "charCountFormat": "{remaining}"
+    },
+    "continueButton": {
+      "text": "Include in Prayer",
+      "action": "SAVE_MOOD_CONTEXT_AND_NAVIGATE",
+      "navigateTo": "/onboarding/add-personal-intention"
+    },
+    "skipButton": {
+      "text": "Keep private",
+      "action": "SKIP_MOOD_CONTEXT_AND_NAVIGATE",
+      "navigateTo": "/onboarding/add-personal-intention"
+    },
+    "tracking": {
+      "screenViewEvent": "onboarding_moodcontext_viewed",
+      "contextProvidedEvent": "onboarding_moodcontext_provided",
+      "contextSkippedEvent": "onboarding_moodcontext_skipped"
+    },
+    "errorMessages": {
+        "missingMoodInfo": "Error: Missing mood information. Please go back and select a mood."
+    },
+    "moodSpecificPrompts": {
+      "peaceful": "What's bringing you this sense of calm?",
+      "grateful": "What are you especially thankful for?",
+      "joyful": "What's filling your heart with joy?",
+      "hopeful": "What's inspiring this hope in your heart?",
+      "content": "What's bringing you this sense of contentment?",
+      "blessed": "How are you feeling God's blessings?",
+      "anxious": "What's weighing on your mind or heart?",
+      "weary": "What's been wearing you down lately?",
+      "overwhelmed": "What's feeling like too much right now?",
+      "seeking": "What are you searching for or needing guidance on?",
+      "angry": "What's frustrating you or making you angry?"
+    }
+  }
+} 

@@ -1,0 +1,125 @@
+{
+  "screenType": "OnboardingSummaryScreen",
+  "description": "Configuration for the summary screen that displays all collected onboarding data.",
+  "configSchema": {
+    "title": "string",
+    "subtitle": "string",
+    "sections": [
+      {
+        "id": "string",
+        "title": "string",
+        "icon": { "type": "string", "name": "string" },
+        "editTargetRoute": "string",
+        "emptyStateText": "string",
+        "peopleDisplayConfig": {
+          "gratitudePrefix": "string",
+          "challengePrefix": "string",
+          "hopePrefix": "string",
+          "defaultPromptText": "string"
+        },
+        "personalFocusConfig": {
+          "moodSectionTitle": "string",
+          "defaultMoodEmoji": "string",
+          "defaultMoodLabel": "string",
+          "prayerNeedsSectionTitle": "string",
+          "defaultNeedsText": "string"
+        },
+        "scheduleConfig": {
+           "defaultScheduleText": "string",
+           "timeSlotEmojis": {}
+        }
+      }
+    ],
+    "editButtonText": "string",
+    "continueButton": {
+      "text": "string",
+      "icon": { "type": "string", "name": "string" },
+      "action": "string",
+      "navigateTo": "string"
+    },
+    "alerts": {
+        "noPeopleSelectedTitle": "string",
+        "noPeopleSelectedMessage": "string"
+    },
+    "tracking": {
+      "screenViewEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "title": "Your Prayer Journey",
+    "alerts": {
+      "noPeopleSelectedTitle": "No Prayer Focus People",
+      "noPeopleSelectedMessage": "It''s best to add at least one person to pray for. Please go back and add someone."
+    },
+    "sections": [
+      {
+        "id": "prayerPeople",
+        "icon": {
+          "name": "account-group",
+          "type": "MaterialCommunityIcons"
+        },
+        "title": "People You''re Praying For",
+        "emptyStateText": "No one added yet. Tap edit to add people.",
+        "editTargetRoute": "/onboarding/prayer-people",
+        "peopleDisplayConfig": {
+          "hopePrefix": "Hope: ",
+          "challengePrefix": "Challenge: ",
+          "gratitudePrefix": "Grateful: ",
+          "defaultPromptText": "Not specified"
+        }
+      },
+      {
+        "id": "personalFocus",
+        "icon": {
+          "name": "heart-pulse",
+          "type": "MaterialCommunityIcons"
+        },
+        "title": "Your Personal Focus",
+        "emptyStateText": "",
+        "editTargetRoute": "/onboarding/prayer-needs",
+        "personalFocusConfig": {
+          "defaultMoodEmoji": "🤔",
+          "defaultMoodLabel": "Not Set",
+          "defaultNeedsText": "None specified yet.",
+          "moodSectionTitle": "Current Mood",
+          "prayerNeedsSectionTitle": "Prayer Needs"
+        }
+      },
+      {
+        "id": "prayerSchedule",
+        "icon": {
+          "name": "calendar-clock",
+          "type": "MaterialCommunityIcons"
+        },
+        "title": "Your Prayer Schedule",
+        "emptyStateText": "No prayer times selected. Feel free to set them later!",
+        "scheduleConfig": {
+          "timeSlotEmojis": {
+            "night": "🌙",
+            "midday": "☀️",
+            "default": "⏰",
+            "evening": "🌆",
+            "morning": "🌅"
+          },
+          "defaultScheduleText": "No prayer times selected"
+        },
+        "editTargetRoute": "/onboarding/times"
+      }
+    ],
+    "subtitle": "Just one more step before your first prayer",
+    "tracking": {
+      "screenViewEvent": "onboarding_summary_viewed"
+    },
+    "continueButton": {
+      "icon": {
+        "name": "arrow-right-thick",
+        "type": "MaterialCommunityIcons"
+      },
+      "text": "Create My First Prayer",
+      "action": "NAVIGATE_NEXT",
+      "navigateTo": "/onboarding/consent"
+    },
+    "editButtonText": "Edit"
+  
+  }
+} 

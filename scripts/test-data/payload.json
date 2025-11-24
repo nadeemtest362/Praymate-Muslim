@@ -1,0 +1,21 @@
+{
+  "userId": "018e5ade-7bf6-4837-a247-5ede754a3b92",
+  "slot": "onboarding-initial",
+  "initialOnboardingSnapshot": {
+    "userId": "018e5ade-7bf6-4837-a247-5ede754a3b92",
+    "firstName": "Jay",
+    "initialMotivation": "closer",
+    "mood": "hopeful|✨",
+    "moodContext": "Excited about starting this new prayer habit and connecting more deeply.",
+    "prayerNeeds": [
+      "Guidance in decision making",
+      "Patience"
+    ],
+    "customPrayerNeed": "To be more present for my family.",
+    "relationshipWithGod": "Good, but I'd like to be closer",
+    "prayerFrequency": "About once a day",
+    "faithTradition": "Christian (Non-Catholic)",
+    "commitmentLevel": "I'm very committed",
+    "streakGoalDays": 14
+  }
+} 

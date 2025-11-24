@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toktrendz Database Schema Check</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #1a1a1a;
+      color: #e0e0e0;
+    }
+    h1 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    button:disabled {
+      background: #666;
+      cursor: not-allowed;
+    }
+    #output {
+      background: #2a2a2a;
+      border: 1px solid #444;
+      border-radius: 5px;
+      padding: 20px;
+      white-space: pre-wrap;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      line-height: 1.5;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+    .error {
+      color: #ff6b6b;
+    }
+    .success {
+      color: #51cf66;
+    }
+    .info {
+      color: #74c0fc;
+    }
+    .warning {
+      color: #ffd43b;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔍 Toktrendz Database Schema Check</h1>
+  <button id="checkBtn" onclick="checkSchema()">Run Schema Check</button>
+  <div id="output"></div>
+
+  <script>
+    // Supabase configuration
+    const SUPABASE_URL = 'https://molydcrzwsoeyqkiofwe.supabase.co'
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1vbHlkY3J6d3NvZXlxa2lvZndlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE5OTY1OTMsImV4cCI6MjA1NzU3MjU5M30.50cbzHiuAFPwr9R2wH_PwjrW1q0eic5XZIh547vhObE'
+    
+    const { createClient } = supabase
+    const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+    
+    const output = document.getElementById('output')
+    const checkBtn = document.getElementById('checkBtn')
+    
+    function log(message, type = '') {
+      const timestamp = new Date().toLocaleTimeString()
+      const className = type ? ` class="${type}"` : ''
+      output.innerHTML += `<span${className}>[${timestamp}] ${message}</span>\n`
+      output.scrollTop = output.scrollHeight
+    }
+    
+    async function checkSchema() {
+      checkBtn.disabled = true
+      output.innerHTML = ''
+      
+      log('🔍 Starting Toktrendz database schema check...', 'info')
+      log(`Database URL: ${SUPABASE_URL}\n`, 'info')
+      
+      const allPotentialTables = [
+        // Video related
+        'videos',
+        'viral_videos',
+        'viral_video_analyses',
+        'video_analyses',
+        'ai_analyses',
+        'tiktok_videos',
+        'video_analysis',
+        'analyses',
+        // Viral insights
+        'viral_insights_summary',
+        'viral_techniques',
+        'emotional_triggers',
+        'visual_elements',
+        'top_hooks',
+        'concept_themes',
+        // GTM related
+        'gtm_projects',
+        'gtm_phases',
+        'gtm_tasks',
+        'gtm_risks',
+        'gtm_media_assets',
+        'gtm_workflows',
+        // Production
+        'production_sessions',
+        // Workflows
+        'workflows',
+        'workflow_steps',
+        'workflow_executions',
+        'workflow_step_executions',
+        // Others
+        'onboarding_flows',
+        'onboarding_flow_steps',
+        'prayer_lab_conversations',
+        'prayer_lab_messages'
+      ]
+      
+      log('📊 Checking all potential tables:\n' + '─'.repeat(80))
+      
+      const existingTables = []
+      
+      for (const tableName of allPotentialTables) {
+        try {
+          const { count, error } = await supabaseClient
+            .from(tableName)
+            .select('*', { count: 'exact', head: true })
+          
+          if (!error) {
+            existingTables.push(tableName)
+            log(`\n✅ Table: ${tableName}`, 'success')
+            log(`   Rows: ${count}`)
+            
+            // Get column info
+            const { data: sample } = await supabaseClient
+              .from(tableName)
+              .select('*')
+              .limit(1)
+            
+            if (sample && sample.length > 0) {
+              log('   Columns:')
+              Object.entries(sample[0]).forEach(([key, value]) => {
+                const type = value === null ? 'null' : Array.isArray(value) ? 'array' : typeof value
+                log(`     - ${key}: ${type}`)
+              })
+            } else {
+              log('   (Table is empty)', 'warning')
+            }
+          }
+        } catch (e) {
+          // Table doesn't exist
+        }
+      }
+      
+      log('\n' + '─'.repeat(80))
+      log(`\n📋 Summary: Found ${existingTables.length} tables:`, 'info')
+      existingTables.forEach(table => log(`   • ${table}`, 'success'))
+      
+      // Detailed inspection
+      if (existingTables.includes('videos')) {
+        log('\n\n🔍 Detailed inspection of videos table:', 'info')
+        const { data: videos } = await supabaseClient
+          .from('videos')
+          .select('*')
+          .limit(2)
+        
+        if (videos && videos.length > 0) {
+          log('Sample video data:')
+          log(JSON.stringify(videos[0], null, 2))
+        }
+      }
+      
+      if (existingTables.includes('ai_analyses')) {
+        log('\n\n🔍 Detailed inspection of ai_analyses table:', 'info')
+        const { data: analyses } = await supabaseClient
+          .from('ai_analyses')
+          .select('*')
+          .limit(1)
+        
+        if (analyses && analyses.length > 0) {
+          log('Sample analysis data:')
+          log(JSON.stringify(analyses[0], null, 2))
+        }
+      }
+      
+      log('\n\n✅ Schema check complete!', 'success')
+      checkBtn.disabled = false
+    }
+  </script>
+</body>
+</html>

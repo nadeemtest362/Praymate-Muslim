@@ -1,0 +1,71 @@
+{
+  "screenType": "PrayerJourneyReadyScreen", 
+  "description": "Progress visualization screen showing the spiritual growth journey ahead, similar to BetterSleep example.",
+  "configSchema": {
+    "title": "string",
+    "subtitle": "string",
+    "backgroundGradient": ["string"],
+    "progressVisualization": {
+      "enabled": "boolean",
+      "timeline": {
+        "duration": "string",
+        "milestones": [
+          {
+            "day": "string",
+            "label": "string"
+          }
+        ]
+      },
+      "resultLabel": "string",
+      "progressCurve": {
+        "startPoint": "object",
+        "endPoint": "object",
+        "color": "string"
+      }
+    },
+    "socialProof": {
+      "enabled": "boolean", 
+      "statistic": "string",
+      "description": "string",
+      "highlightedText": "string"
+    },
+    "cta": {
+      "text": "string",
+      "gradient": ["string"]
+    },
+    "tracking": {
+      "screenViewEvent": "string",
+      "ctaTappedEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "title": "Your Personalized Prayer Journey is Ready",
+    "subtitle": "Based on your inputs, we've crafted a unique spiritual path designed just for you",
+    "backgroundGradient": ["#1A1B4B", "#2D1B69", "#4A4E83", "#6B7DB8"],
+    "progressVisualization": {
+      "enabled": true,
+      "title": "Your Spiritual Growth Path",
+      "timeline": {
+        "milestones": [
+          { "label": "Today", "day": "Day 1" },
+          { "label": "Growing", "day": "Day 7" },
+          { "label": "Flourishing", "day": "Day 30" }
+        ]
+      }
+    },
+    "socialProof": {
+      "enabled": true,
+      "statistic": "87%",
+      "description": " of users report feeling closer to God in as little as ",
+      "highlightedText": "7 days"
+    },
+    "cta": {
+      "text": "Begin My Journey",
+      "gradient": ["#FFD700", "#FF8C42"],
+      "icon": "arrow-forward"
+    },
+    "tracking": {
+      "ctaButtonTapped": "cta_button_tapped"
+    }
+  }
+} 

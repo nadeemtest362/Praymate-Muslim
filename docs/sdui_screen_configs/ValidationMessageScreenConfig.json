@@ -1,0 +1,44 @@
+{
+  "screenType": "ValidationMessageScreen",
+  "description": "Configuration for a visually rich validation screen with background image, floating illustration, and glass-like text container.",
+  "configSchema": {
+    "backgroundImage": "string",
+    "overlayColors": ["string"],
+    "overlayOpacity": "number",
+    "title": "string",
+    "message": "string",
+    "illustration": {
+      "source": "string",
+      "position": "string",
+      "size": "number",
+      "animation": "string"
+    },
+    "actionButton": {
+      "text": "string",
+      "action": "string",
+      "navigateTo": "string"
+    },
+    "tracking": {
+      "screenViewEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "backgroundImage": "https://images.unsplash.com/photo-1518057111178-44a106bad149?q=80&w=1000&auto=format&fit=crop",
+    "title": "faith grows in small moments",
+    "message": "The most beautiful gardens grow from tiny seeds, planted consistently. Your prayer life works the same way. A few minutes, even when life feels overwhelming, can take root and flourish.",
+    "illustration": {
+      "source": "jesus-iphone",
+      "position": "top",
+      "size": 350,
+      "animation": "float"
+    },
+    "actionButton": {
+      "text": "plant the first seed",
+      "action": "NAVIGATE_NEXT",
+      "navigateTo": "/onboarding/first-name"
+    },
+    "tracking": {
+      "screenViewEvent": "onboarding_validation_consistency_viewed"
+    }
+  }
+} 

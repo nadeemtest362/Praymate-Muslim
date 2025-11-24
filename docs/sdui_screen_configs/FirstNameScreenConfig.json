@@ -1,0 +1,66 @@
+{
+  "screenType": "FirstNameScreen",
+  "description": "Configuration for the screen that asks for the user's first name.",
+  "configSchema": {
+    "logo": {
+      "text": "string",
+      "accent": "string",
+      "emoji": "string"
+    },
+    "title": "string",
+    "inputField": {
+      "placeholder": "string",
+      "maxLength": "number",
+      "autoCapitalize": "string",
+      "autoCorrect": "boolean",
+      "returnKeyType": "string",
+      "autoFocus": "boolean",
+      "validation": {
+        "requiredMessage": "string"
+      }
+    },
+    "actionButton": {
+      "text": "string",
+      "action": "string",
+      "successMessage": "string",
+      "errorMessage": "string",
+      "navigateToOnSuccess": "string"
+    },
+    "tracking": {
+      "screenViewEvent": "string",
+      "saveSuccessEvent": "string",
+      "saveFailureEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "logo": {
+      "text": "just",
+      "emoji": "🙏",
+      "accent": "pray"
+    },
+    "title": "what's your name?",
+    "tracking": {
+      "screenViewEvent": "onboarding_firstname_viewed",
+      "saveFailureEvent": "onboarding_firstname_save_failed",
+      "saveSuccessEvent": "onboarding_firstname_saved"
+    },
+    "inputField": {
+      "autoFocus": true,
+      "maxLength": 50,
+      "validation": {
+        "requiredMessage": "Please enter your first name."
+      },
+      "autoCorrect": false,
+      "placeholder": "first name",
+      "returnKeyType": "done",
+      "autoCapitalize": "words"
+    },
+    "actionButton": {
+      "text": "continue",
+      "action": "SAVE_FIRST_NAME_AND_NAVIGATE",
+      "errorMessage": "Could not save your name. Please try again.",
+      "successMessage": "Name saved!",
+      "navigateToOnSuccess": "/onboarding/prayer-people"
+    }
+  }
+} 

@@ -1,0 +1,116 @@
+{
+  "screenType": "PrayerScheduleScreen",
+  "description": "Configuration for selecting preferred prayer times and handling notification permissions.",
+  "configSchema": {
+    "title": "string",
+    "subtitle": "string",
+    "timeSlots": [
+      {
+        "id": "string",
+        "icon": {
+          "type": "string",
+          "name": "string"
+        },
+        "title": "string",
+        "timeRange": "string",
+        "description": "string"
+      }
+    ],
+    "infoMessage": {
+      "icon": {
+        "type": "string",
+        "name": "string"
+      },
+      "text": "string"
+    },
+    "permissionDeniedCard": {
+      "text": "string",
+      "settingsButtonText": "string"
+    },
+    "continueButton": {
+      "text": "string",
+      "loadingText": "string",
+      "action": "string",
+      "navigateTo": "string"
+    },
+    "skipButton": {
+      "text": "string",
+      "action": "string",
+      "navigateTo": "string"
+    },
+    "alerts": {
+      "notificationsDisabledTitle": "string",
+      "notificationsDisabledMessage": "string",
+      "noTimeSelectedTitle": "string",
+      "noTimeSelectedMessage": "string"
+    },
+    "tracking": {
+      "screenViewEvent": "string",
+      "timeSlotSelectedEventPrefix": "string",
+      "permissionsRequestedEvent": "string",
+      "permissionsGrantedEvent": "string",
+      "permissionsDeniedEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "title": "set your prayer schedule",
+    "subtitle": "when will you dedicate time to pray?",
+    "timeSlots": [
+      {
+        "id": "morning",
+        "icon": { "type": "MaterialCommunityIcons", "name": "weather-sunset-up" },
+        "title": "Morning Prayers",
+        "timeRange": "6 AM - 9 AM",
+        "description": "Start your day with intention and gratitude."
+      },
+      {
+        "id": "midday",
+        "icon": { "type": "MaterialCommunityIcons", "name": "weather-sunny" },
+        "title": "Midday Reflection",
+        "timeRange": "12 PM - 2 PM",
+        "description": "Pause and find peace during your day."
+      },
+      {
+        "id": "evening",
+        "icon": { "type": "MaterialCommunityIcons", "name": "weather-sunset-down" },
+        "title": "Evening Connection",
+        "timeRange": "6 PM - 9 PM",
+        "description": "Reflect and give thanks to Him for the day."
+      },
+      {
+        "id": "night",
+        "icon": { "type": "MaterialCommunityIcons", "name": "weather-night" },
+        "title": "Nighttime Peace",
+        "timeRange": "9 PM - 11 PM",
+        "description": "End your day with quiet contemplation."
+      }
+    ],
+    "infoMessage": {
+      "icon": { "type": "MaterialCommunityIcons", "name": "lightbulb-on-outline" },
+      "text": "Select your dedicated prayer times. We'll help you stay committed with gentle reminders."
+    },
+    "permissionDeniedCard": {
+      "text": "Enable prayer notifications in Settings",
+      "settingsButtonText": "Open Settings"
+    },
+    "continueButton": {
+      "text": "continue",
+      "loadingText": "One sec...",
+      "action": "SAVE_PRAYER_TIMES_AND_NAVIGATE",
+      "navigateTo": "/onboarding/summary"
+    },
+    "alerts": {
+      "notificationsDisabledTitle": "Reminders Disabled",
+      "notificationsDisabledMessage": "We'll save your schedule, but notifications are off. You can enable them in your device settings for prayer reminders.",
+      "noTimeSelectedTitle": "No time selected",
+      "noTimeSelectedMessage": "Please select at least one preferred prayer time to continue."
+    },
+    "tracking": {
+      "screenViewEvent": "onboarding_prayertimes_viewed",
+      "timeSlotSelectedEventPrefix": "onboarding_prayertime_selected_",
+      "permissionsRequestedEvent": "onboarding_notification_permission_requested",
+      "permissionsGrantedEvent": "onboarding_notification_permission_granted",
+      "permissionsDeniedEvent": "onboarding_notification_permission_denied"
+    }
+  }
+} 

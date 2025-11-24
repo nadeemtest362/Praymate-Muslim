@@ -1,0 +1,60 @@
+{
+  "screenType": "BenefitsHighlightScreen",
+  "description": "Highlights the key benefits of using the app before showing the paywall.",
+  "configSchema": {
+    "title": "string",
+    "benefits": [
+      {
+        "id": "string",
+        "icon": { "type": "string", "name": "string" },
+        "title": "string",
+        "description": "string"
+      }
+    ],
+    "continueButton": {
+      "text": "string",
+      "action": "string",
+      "navigateTo": "string"
+    },
+    "tracking": {
+      "screenViewEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "title": "Unlock Your Personal Prayer Journey",
+    "benefits": [
+      {
+        "id": "personalized_prayers",
+        "icon": { "type": "MaterialCommunityIcons", "name": "account-heart-outline" },
+        "title": "Truly Personal Prayers",
+        "description": "Prayers crafted uniquely for you and your loved ones, reflecting your heart."
+      },
+      {
+        "id": "guided_reflection",
+        "icon": { "type": "MaterialCommunityIcons", "name": "meditation" },
+        "title": "Guided Reflection",
+        "description": "Find peace and clarity with prompts that deepen your spiritual connection."
+      },
+      {
+        "id": "habit_building",
+        "icon": { "type": "MaterialCommunityIcons", "name": "calendar-check" },
+        "title": "Build a Consistent Habit",
+        "description": "Stay on track with gentle reminders and by setting meaningful prayer goals."
+      },
+      {
+        "id": "strengthen_faith",
+        "icon": { "type": "MaterialCommunityIcons", "name": "church" },
+        "title": "Strengthen Your Faith",
+        "description": "Grow closer to God through a more intentional and personal prayer life."
+      }
+    ],
+    "continueButton": {
+      "text": "See Subscription Plans",
+      "action": "NAVIGATE_TO_PAYWALL",
+      "navigateTo": "/onboarding/paywall"
+    },
+    "tracking": {
+      "screenViewEvent": "onboarding_benefits_viewed"
+    }
+  }
+} 

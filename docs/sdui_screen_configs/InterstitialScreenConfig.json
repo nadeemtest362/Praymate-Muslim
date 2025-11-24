@@ -1,0 +1,29 @@
+{
+  "screenType": "InterstitialScreen",
+  "description": "Configuration for a transitional/interstitial screen.",
+  "configSchema": {
+    "emoji": "string",
+    "titleTemplate": "string",
+    "subtitle": "string",
+    "button": {
+      "text": "string",
+      "action": "string",
+      "navigateTo": "string"
+    },
+    "tracking": {
+      "screenViewEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "image": "https://kfrvxoxdehduqrpcbibl.supabase.co/storage/v1/object/public/assets/onboarding/interstitials/prayerbeforebed.png",
+    "button": {
+      "text": "I'm ready",
+      "action": "NAVIGATE_NEXT"
+    },
+    "subtitle": "Now let's personalize your prayer experience",
+    "tracking": {
+      "screenViewEvent": "onboarding_prayer_habit_interstitial_viewed"
+    },
+    "titleTemplate": "{APP_LOGO} helps you build a positive prayer habit that brings you closer to God in just 3-minutes a day"
+  }
+} 

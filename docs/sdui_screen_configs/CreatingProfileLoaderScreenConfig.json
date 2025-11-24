@@ -1,0 +1,12 @@
+{
+  "screenType": "CreatingProfileLoaderScreen",
+  "description": "Configuration for the enhanced creating profile loader screen with multiple loading steps and animations.",
+  "configSchema": {
+    "displayText": "string",
+    "duration": "number"
+  },
+  "exampleConfig": {
+    "displayText": "Creating your personalized prayer profile...",
+    "duration": 8500
+  }
+} 

@@ -1,0 +1,26 @@
+{
+    "screenType": "InterstitialScreen",
+    "description": "Configuration for a transitional/interstitial screen.",
+    "configSchema": {
+      "emoji": "string",
+      "titleTemplate": "string",
+      "subtitle": "string",
+      "button": {
+        "text": "string",
+        "action": "string",
+        "navigateTo": "string"
+      },
+      "tracking": {
+        "screenViewEvent": "string"
+      }
+    },
+    "exampleConfig": {
+    "image": "https://kfrvxoxdehduqrpcbibl.supabase.co/storage/v1/object/public/assets/onboarding/interstitials/prayerpeople.png",
+    "button": {
+      "text": "I'm ready",
+      "action": "NAVIGATE_NEXT"
+    },
+    "subtitle": "Let's add an intention for someone you love...",
+    "titleTemplate": "Praying for others creates ripples of blessing that reach far beyond what we can see"
+  }
+}

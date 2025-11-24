@@ -1,0 +1,25 @@
+{
+  "screenType": "ValuePaywallScreen",
+  "description": "Prayer sharing screen that encourages users to share their prayer with others using the multiplication/loaves & fishes theme",
+  "configSchema": {
+    "title": "string",
+    "subtitle": "string",
+    "shareButtonText": "string",
+    "skipButtonText": "string",
+    "scriptureText": "string (optional - not currently used)",
+    "scriptureRef": "string (optional - not currently used)"
+  },
+  "exampleConfig": {
+    "title": "One Prayer Shared\nFeeds Many Souls",
+    "subtitle": "Like the loaves and fishes, your simple act multiplies",
+    "shareButtonText": "Multiply This Prayer",
+    "skipButtonText": "Keep it personal for now"
+  },
+  "notes": [
+    "This screen replaces the ValuePaywallScreen with a prayer sharing experience",
+    "Uses the multiplication theme (loaves & fishes) to encourage sharing",
+    "The screen shows animations of bread + fish = miracle",
+    "After sharing, the button changes to 'Continue to App'",
+    "The screen uses firstPrayerContent from onboardingStore"
+  ]
+}

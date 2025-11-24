@@ -1,0 +1,149 @@
+{
+  "expo": {
+    "name": "Praymate",
+    "slug": "justpray",
+    "scheme": "justpray",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": false,
+    "splash": {
+      "backgroundColor": "#003366"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.md90210.justpray",
+      "buildNumber": "1",
+      "usesNonExemptEncryption": false,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "UIBackgroundModes": [
+          "background-fetch"
+        ],
+        "UIDeviceFamily": [1],
+        "UIRequiresFullScreen": true
+      },
+      "associatedDomains": [
+        "applinks:trypraymate.com"
+      ],
+      "entitlements": {
+        "com.apple.developer.applesignin": [
+          "Default"
+        ],
+        "com.apple.developer.family-controls": true,
+        "com.apple.security.application-groups": [
+          "group.com.md90210.justpray"
+        ]
+      },
+      "usesAppleSignIn": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.md90210.justpray"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "onesignal-expo-plugin",
+        {
+          "mode": "production"
+        }
+      ],
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "android": {
+            "fonts": [
+              {
+                "fontFamily": "SN Pro",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/fonts/SNPro-Regular.ttf",
+                    "weight": 400
+                  },
+                  {
+                    "path": "./assets/fonts/SNPro-Medium.ttf",
+                    "weight": 500
+                  },
+                  {
+                    "path": "./assets/fonts/SNPro-Semibold.ttf",
+                    "weight": 600
+                  },
+                  {
+                    "path": "./assets/fonts/SNPro-Bold.ttf",
+                    "weight": 700
+                  },
+                  {
+                    "path": "./assets/fonts/SNPro-Heavy.ttf",
+                    "weight": 800
+                  },
+                  {
+                    "path": "./assets/fonts/SNPro-Black.ttf",
+                    "weight": 900
+                  }
+                ]
+              }
+            ]
+          },
+          "ios": {
+            "fonts": [
+              "./assets/fonts/SNPro-Regular.ttf",
+              "./assets/fonts/SNPro-Medium.ttf",
+              "./assets/fonts/SNPro-Semibold.ttf",
+              "./assets/fonts/SNPro-Bold.ttf",
+              "./assets/fonts/SNPro-Heavy.ttf",
+              "./assets/fonts/SNPro-Black.ttf"
+            ]
+          }
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#2C2A5E"
+        }
+      ],
+      "expo-apple-authentication",
+      "expo-background-fetch",
+      "expo-task-manager",
+      [
+        "react-native-device-activity",
+        {
+          "appleTeamId": "Y4JQ5SW3X5",
+          "appGroup": "group.com.md90210.justpray"
+        }
+      ],
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://sentry.io/",
+          "project": "praymate",
+          "organization": "stealth-3f"
+        }
+      ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "1c06633e-c1d1-4406-88b2-9996f420ea87"
+      }
+    },
+    "owner": "soul-snax",
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/bf8bca2a-aba5-4c6c-a553-bf5d5626b829",
+      "enabled": true
+    },
+    "experiments": {
+      "tsconfigPaths": true
+    }
+  }
+}

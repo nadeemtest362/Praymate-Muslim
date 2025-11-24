@@ -1,0 +1,20 @@
+{
+  "exampleConfig": {
+    "screen_name": "General Question",
+    "description": "Relationship with God question",
+    "questionId": "relationship_with_god",
+    "question": "How would you describe your relationship with God right now?",
+    "options": [
+      { "id": "very_close", "text": "Very close", "emoji": "❤️", "action": "select", "responseValue": "very_close" },
+      { "id": "close", "text": "Close", "emoji": "😊", "action": "select", "responseValue": "close" },
+      { "id": "complicated", "text": "Complicated", "emoji": "🤔", "action": "select", "responseValue": "complicated" },
+      { "id": "distant", "text": "Distant", "emoji": "🌫️", "action": "select", "responseValue": "distant" },
+      { "id": "rebuilding", "text": "Rebuilding", "emoji": "🧱", "action": "select", "responseValue": "rebuilding" }
+    ],
+    "tracking": {
+      "screenViewEvent": "general_question_viewed",
+      "optionSelectedEventPrefix": "general_question_option_"
+    }
+  }
+}
+

@@ -1,0 +1,216 @@
+{
+  "screenType": "PrayerNeedsSelectionScreen",
+  "description": "Configuration for selecting predefined prayer needs and adding a custom one.",
+  "configSchema": {
+    "title": "string",
+    "subtitle": "string",
+    "prayerNeedCategories": [
+      {
+        "id": "string",
+        "title": "string",
+        "options": [
+          {
+            "id": "string",
+            "text": "string"
+          }
+        ]
+      }
+    ],
+    "customNeedSection": {
+      "addButton": {
+        "text": "string",
+        "icon": {
+          "type": "string",
+          "name": "string"
+        }
+      },
+      "inputTitle": "string",
+      "inputPlaceholder": "string",
+      "cancelButtonText": "string",
+      "saveButtonText": "string",
+      "displayTitle": "string",
+      "editButton": {
+        "text": "string",
+        "icon": {
+          "type": "string",
+          "name": "string"
+        }
+      }
+    },
+    "continueButton": {
+      "text": "string",
+      "action": "string",
+      "navigateTo": "string"
+    },
+    "validation": {
+      "selectionRequiredTitle": "string",
+      "selectionRequiredMessage": "string"
+    },
+    "tracking": {
+      "screenViewEvent": "string",
+      "needSelectedEvent": "string",
+      "customNeedAddedEvent": "string",
+      "customNeedEditedEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "title": "🌱 choose ongoing prayer themes",
+    "subtitle": "Select up to 3 themes for focused prayers",
+    "validation": {
+      "selectionRequiredTitle": "Almost There!",
+      "selectionRequiredMessage": "Please select at least one prayer theme that resonates with your heart, or add something personal. This helps me create prayers that speak to your spiritual journey."
+    },
+    "continueButton": {
+      "text": "Continue My Journey",
+      "action": "navigate",
+      "navigateTo": "/onboarding/times"
+    },
+    "customNeedSection": {
+      "addButton": {
+        "icon": {
+          "name": "plus-circle-outline",
+          "type": "MaterialCommunityIcons"
+        },
+        "text": "Add Something Personal"
+      },
+      "editButton": {
+        "icon": {
+          "name": "pencil",
+          "type": "MaterialCommunityIcons"
+        },
+        "text": "Edit"
+      },
+      "inputTitle": "What else is on your heart?",
+      "displayTitle": "Personal Prayer Need:",
+      "saveButtonText": "Add to My Prayers",
+      "cancelButtonText": "Cancel",
+      "inputPlaceholder": "Share something specific you'd like God to help you with... (e.g., \"Starting a new job\", \"Caring for my aging parent\", \"Finding my life partner\")"
+    },
+    "prayerNeedCategories": [
+      {
+        "id": "spiritual_growth",
+        "icon": "church",
+        "title": "Growing Closer to God",
+        "options": [
+          {
+            "id": "faith_deepening",
+            "icon": "heart-multiple",
+            "text": "Strengthen My Faith",
+            "description": "Help me trust God more deeply in all areas of life"
+          },
+          {
+            "id": "spiritual_discipline",
+            "icon": "book-open-variant",
+            "text": "Prayer & Bible Study",
+            "description": "Develop consistent habits of connecting with God"
+          },
+          {
+            "id": "discernment",
+            "icon": "ear-hearing",
+            "text": "Hearing God's Voice",
+            "description": "Learn to recognize and follow God's guidance"
+          },
+          {
+            "id": "worship",
+            "icon": "music",
+            "text": "Heart of Worship",
+            "description": "Cultivate a spirit of praise and thanksgiving"
+          }
+        ]
+      },
+      {
+        "id": "inner_peace",
+        "icon": "meditation",
+        "title": "Finding Peace & Healing",
+        "options": [
+          {
+            "id": "anxiety_peace",
+            "icon": "heart-pulse",
+            "text": "Calm My Anxious Heart",
+            "description": "Find God's peace in the midst of worry and stress"
+          },
+          {
+            "id": "emotional_healing",
+            "icon": "heart-plus",
+            "text": "Emotional Healing",
+            "description": "Healing from past hurts, grief, or emotional pain"
+          },
+          {
+            "id": "mental_clarity",
+            "icon": "brain",
+            "text": "Clear Mind & Focus",
+            "description": "Mental clarity and freedom from overwhelming thoughts"
+          },
+          {
+            "id": "rest",
+            "icon": "sleep",
+            "text": "True Rest",
+            "description": "Finding soul rest and renewal in God's presence"
+          }
+        ]
+      },
+      {
+        "id": "relationships",
+        "icon": "account-group",
+        "title": "Love & Relationships",
+        "options": [
+          {
+            "id": "family_harmony",
+            "icon": "home-heart",
+            "text": "Family Unity",
+            "description": "Peace, understanding, and love in family relationships"
+          },
+          {
+            "id": "forgiveness",
+            "icon": "handshake",
+            "text": "Forgiveness & Reconciliation",
+            "description": "Grace to forgive others and seek reconciliation"
+          },
+          {
+            "id": "compassion",
+            "icon": "heart-circle",
+            "text": "Love Like Jesus",
+            "description": "A heart full of compassion and love for others"
+          },
+          {
+            "id": "community",
+            "icon": "account-multiple",
+            "text": "Christian Community",
+            "description": "Meaningful connections with fellow believers"
+          }
+        ]
+      },
+      {
+        "id": "purpose_direction",
+        "icon": "compass",
+        "title": "Purpose & Direction",
+        "options": [
+          {
+            "id": "life_purpose",
+            "icon": "map-marker-star",
+            "text": "God's Purpose for My Life",
+            "description": "Understanding how God wants to use my gifts and talents"
+          },
+          {
+            "id": "wisdom_decisions",
+            "icon": "lightbulb-on",
+            "text": "Wisdom in Decisions",
+            "description": "Divine wisdom for important life choices and decisions"
+          },
+          {
+            "id": "breakthrough",
+            "icon": "door-open",
+            "text": "Breakthrough & Open Doors",
+            "description": "God's favor and breakthrough in challenging situations"
+          },
+          {
+            "id": "provision",
+            "icon": "gift",
+            "text": "God's Provision",
+            "description": "Trust in God's provision for all my needs"
+          }
+        ]
+      }
+    ]
+  }
+} 

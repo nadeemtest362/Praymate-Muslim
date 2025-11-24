@@ -1,0 +1,131 @@
+{
+  "screenType": "PrayerGenerationLoadingScreen",
+  "description": "Displays an engaging loading sequence with conversion messaging during prayer generation.",
+  "configSchema": {
+    "title": "string",
+    "backgroundGradient": ["string"],
+    "loadingStages": [
+      {
+        "id": "string",
+        "message": "string",
+        "duration": "number",
+        "checkmark": "boolean"
+      }
+    ],
+    "progressBar": {
+      "enabled": "boolean",
+      "color": "string",
+      "backgroundColor": "string"
+    },
+    "animation": {
+      "type": "string",
+      "color": "string",
+      "size": "number"
+    },
+    "tracking": {
+      "screenViewEvent": "string",
+      "stageCompletedEventPrefix": "string"
+    }
+  },
+  "exampleConfig": {
+    "title": "Almost ready, friend!",
+    "backgroundGradient": ["#1A1B4B", "#2D1B69", "#4A4E83"],
+    "progressBar": {
+      "enabled": true,
+      "color": "#FFD700",
+      "backgroundColor": "rgba(255, 255, 255, 0.2)"
+    },
+    "animation": {
+      "type": "simple",
+      "color": "#FFD700",
+      "size": 24
+    },
+    "tracking": {
+      "screenViewEvent": "prayer_generation_loading_viewed",
+      "stageCompletedEventPrefix": "prayer_generation_stage_completed"
+    },
+    "mockData": {
+      "firstName": "Sarah",
+      "userName": "Sarah",
+      "faithTradition": "Christian",
+      "streakGoalDays": 30,
+      "prayerTimes": ["morning", "evening"],
+      "mood": "Hopeful|✨",
+      "moodContext": "Excited about starting this spiritual journey and feeling grateful for my family",
+      "initialMotivation": "closer",
+      "relationshipWithGod": "close",
+      "prayerFrequency": "daily",
+      "commitmentLevel": "very_committed",
+      "prayerFocusPeople": [
+        {
+          "id": "1",
+          "name": "Mom",
+          "imageUri": "https://randomuser.me/api/portraits/women/68.jpg",
+          "relationship": "Mother",
+          "gender": "she"
+        },
+        {
+          "id": "2", 
+          "name": "David",
+          "imageUri": "https://randomuser.me/api/portraits/men/32.jpg",
+          "relationship": "Brother",
+          "gender": "he"
+        },
+        {
+          "id": "3",
+          "name": "Emma",
+          "imageUri": "https://randomuser.me/api/portraits/women/44.jpg",
+          "relationship": "Best Friend",
+          "gender": "she"
+        },
+        {
+          "id": "4",
+          "name": "Grandpa Joe",
+          "imageUri": "https://randomuser.me/api/portraits/men/79.jpg",
+          "relationship": "Grandfather",
+          "gender": "he"
+        },
+        {
+          "id": "5",
+          "name": "Aunt Lisa",
+          "imageUri": "https://randomuser.me/api/portraits/women/55.jpg",
+          "relationship": "Aunt",
+          "gender": "she"
+        }
+      ],
+      "prayerNeeds": [
+        "faith_deepening",
+        "anxiety_peace", 
+        "compassion",
+        "wisdom_decisions",
+        "emotional_healing"
+      ],
+      "customPrayerNeed": "Starting my new job next week and wanting God's guidance",
+      "consentGiven": true,
+      "hasCompletedOnboarding": false,
+      "currentBatchOfIntentions": [
+        {
+          "personName": "Mom",
+          "personImageUri": "https://randomuser.me/api/portraits/women/68.jpg",
+          "category": "healing",
+          "details": "Recovering from her cold and needs strength",
+          "isSelf": false
+        },
+        {
+          "personName": "David",
+          "personImageUri": "https://randomuser.me/api/portraits/men/32.jpg", 
+          "category": "wisdom",
+          "details": "Making important career decisions",
+          "isSelf": false
+        },
+        {
+          "personName": "Emma",
+          "personImageUri": "https://randomuser.me/api/portraits/women/44.jpg",
+          "category": "peace",
+          "details": "Struggling with stress at work",
+          "isSelf": false
+        }
+      ]
+    }
+  }
+} 

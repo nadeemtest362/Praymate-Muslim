@@ -1,0 +1,48 @@
+{
+  "screenType": "CommitmentQuestionScreen",
+  "description": "Asks the user about their commitment to daily prayer.",
+  "configSchema": {
+    "title": "string",
+    "question": "string",
+    "options": [
+      {
+        "id": "string",
+        "text": "string",
+        "action": "string",
+        "navigateTo": "string"
+      }
+    ],
+    "tracking": {
+      "screenViewEvent": "string",
+      "optionSelectedEventPrefix": "string"
+    }
+  },
+  "exampleConfig": {
+    "title": "a moment with god",
+    "question": "how committed are you to spending a few minutes a day getting closer to God?",
+    "options": [
+      {
+        "id": "very_committed",
+        "text": "I'm very committed",
+        "action": "NAVIGATE_NEXT",
+        "navigateTo": "/onboarding/streak-goal"
+      },
+      {
+        "id": "ready_to_start",
+        "text": "I'm ready to make this a priority",
+        "action": "NAVIGATE_NEXT",
+        "navigateTo": "/onboarding/streak-goal"
+      },
+      {
+        "id": "want_to_try",
+        "text": "I want to try my best",
+        "action": "NAVIGATE_NEXT",
+        "navigateTo": "/onboarding/streak-goal"
+      }
+    ],
+    "tracking": {
+      "screenViewEvent": "onboarding_commitmentq_viewed",
+      "optionSelectedEventPrefix": "onboarding_commitmentq_option_"
+    }
+  }
+} 

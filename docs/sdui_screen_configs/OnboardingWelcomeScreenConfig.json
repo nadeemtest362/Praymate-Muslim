@@ -1,0 +1,54 @@
+{
+  "screenType": "OnboardingWelcomeScreen",
+  "description": "The first onboarding stage that introduces the Just Pray experience with space for multi-step copy and animation.",
+  "configSchema": {
+    "stages": [
+      {
+        "id": "string",
+        "eyebrow": "string",
+        "title": "string",
+        "body": "string",
+        "durationMs": "number"
+      }
+    ],
+    "autoAdvance": "boolean",
+    "defaultStageDurationMs": "number",
+    "continueButtonLabel": "string",
+    "finalButtonLabel": "string",
+    "showProgressDots": "boolean",
+    "analytics": {
+      "stageViewedEvent": "string",
+      "completedEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "stages": [
+      {
+        "id": "settle",
+        "eyebrow": "Before we begin",
+        "title": "Let the noise settle.",
+        "body": "We built Just Pray to give you a calm, focused rhythm for prayer, even on your busiest days.",
+        "durationMs": 3600
+      },
+      {
+        "id": "guidance",
+        "eyebrow": "What to expect",
+        "title": "We guide every step.",
+        "body": "From scripture to tailored prompts, each moment is crafted so you always know where to begin.",
+        "durationMs": 3600
+      },
+      {
+        "id": "prepare",
+        "eyebrow": "Ready to start?",
+        "title": "Let's shape your journey.",
+        "body": "Answer a few quick questions so we can tune your prayer time around your life and the people who matter most.",
+        "durationMs": 3600
+      }
+    ],
+    "autoAdvance": true,
+    "defaultStageDurationMs": 3600,
+    "continueButtonLabel": "Next",
+    "finalButtonLabel": "Begin",
+    "showProgressDots": true
+  }
+}

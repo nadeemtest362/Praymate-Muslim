@@ -1,0 +1,28 @@
+{
+  "screenType": "OnboardingIntentionsSetConfirmationScreen",
+  "description": "Displays a confirmation after all intentions for the selected prayer people have been set during onboarding.",
+  "configSchema": {
+    "title": "string",
+    "infoText": "string",
+    "doneButton": {
+      "text": "string",
+      "action": "string" 
+    },
+    "tracking": {
+      "screenViewEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "title": "Let your people know you're praying for them ✨",
+    "infoText": "These prayer intentions are now set for your upcoming prayers.",
+    "enableMessaging": true,
+    "tracking": {
+      "screenViewEvent": "onboarding_batch_intentions_confirmation_viewed"
+    },
+    "doneButton": {
+      "text": "Continue",
+      "action": "NAVIGATE_NEXT_ONBOARDING_STEP"
+    },
+    "isForSelfConfirmation": false
+  }
+} 

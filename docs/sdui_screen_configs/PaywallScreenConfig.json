@@ -1,0 +1,104 @@
+{
+  "screenType": "PaywallScreen",
+  "description": "Displays the Adapty paywall.",
+  "configSchema": {
+    "title": "string",
+    "subtitle": "string",
+    "fallbackContent": {
+        "message": "string",
+        "retryButtonText": "string"
+    },
+    "tracking": {
+      "screenViewEvent": "string",
+      "purchaseSuccessEvent": "string",
+      "purchaseFailedEvent": "string",
+      "restoreSuccessEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "paywallId": "onboarding_paywall_v1",
+    "placement": "after_mood",
+    "title": "Deepen Your Prayer Life",
+    "subtitle": "Unlock personalized prayers, unlimited intentions, and spiritual insights to strengthen your connection with God.",
+    "benefits": [
+      {
+        "icon": "✨",
+        "title": "AI-Personalized Prayers",
+        "description": "Prayers uniquely crafted for your life, challenges, and spiritual journey"
+      },
+      {
+        "icon": "🙏",
+        "title": "Unlimited Prayer Intentions",
+        "description": "Add as many people and intentions as you need to your prayer list"
+      },
+      {
+        "icon": "📊",
+        "title": "Spiritual Growth Insights",
+        "description": "Track your prayer consistency and see how your faith deepens over time"
+      },
+      {
+        "icon": "🎵",
+        "title": "Ambient Prayer Sounds",
+        "description": "Beautiful background music to enhance your prayer experience"
+      }
+    ],
+    "skipButtonText": "Maybe Later",
+    "continueButtonText": "Start 7-Day Free Trial",
+    "showSkipButton": true,
+    "backgroundGradient": ["#1F1F1F", "#121212"]
+  },
+  "variations": {
+    "before_prayer": {
+      "paywallId": "onboarding_paywall_v1",
+      "placement": "before_prayer",
+      "title": "Your First Prayer Awaits",
+      "subtitle": "Experience the full power of personalized prayer with Premium access.",
+      "benefits": [
+        {
+          "icon": "🎁",
+          "title": "First Week Free",
+          "description": "Try all premium features risk-free for 7 days"
+        },
+        {
+          "icon": "💎",
+          "title": "Premium Prayer Experience",
+          "description": "Deeper personalization and richer prayer content"
+        },
+        {
+          "icon": "🔔",
+          "title": "Smart Reminders",
+          "description": "Never miss your prayer time with gentle notifications"
+        }
+      ],
+      "skipButtonText": "Use Free Version",
+      "continueButtonText": "Unlock Premium Prayer",
+      "showSkipButton": true
+    },
+    "after_first_prayer": {
+      "paywallId": "post_prayer_paywall_v1",
+      "placement": "after_first_prayer",
+      "title": "Continue Your Journey",
+      "subtitle": "You've experienced your first personalized prayer. Ready for more?",
+      "benefits": [
+        {
+          "icon": "🌟",
+          "title": "Daily Personalized Prayers",
+          "description": "Fresh prayers every morning and evening"
+        },
+        {
+          "icon": "📖",
+          "title": "Scripture Integration",
+          "description": "Relevant Bible verses woven into your prayers"
+        },
+        {
+          "icon": "🤝",
+          "title": "Prayer Community",
+          "description": "Share prayer requests with trusted friends"
+        }
+      ],
+      "skipButtonText": "Not Now",
+      "continueButtonText": "Continue with Premium",
+      "showSkipButton": true
+    }
+  }
+} 

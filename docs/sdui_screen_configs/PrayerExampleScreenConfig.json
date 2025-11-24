@@ -1,0 +1,20 @@
+{
+  "screenType": "PrayerExampleScreen",
+  "description": "Shows an example prayer card with a message about how daily prayer can deepen relationship with God.",
+  "configSchema": {
+    "title": { "type": "string" },
+    "message": { "type": "string" },
+    "buttonText": { "type": "string" },
+    "tracking": {
+      "screenViewEvent": { "type": "string" }
+    }
+  },
+  "exampleConfig": {
+    "title": "Your Daily Prayer",
+    "message": "A few minutes a day can go a long way in deepening your relationship with Him.",
+    "buttonText": "I'm Ready",
+    "tracking": {
+      "screenViewEvent": "onboarding_prayer_example_viewed"
+    }
+  }
+} 

@@ -1,0 +1,30 @@
+{
+  "screenType": "OnboardingIntentionsSetConfirmationScreen",
+  "description": "Displays a confirmation message after a self-intention is successfully added.",
+  "configSchema": {
+    "isForSelfConfirmation": "boolean",
+    "title": "string",
+    "infoText": "string",
+    "imageName": "string",
+    "doneButton": {
+      "text": "string",
+      "action": "string"
+    },
+    "tracking": {
+      "screenViewEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "isForSelfConfirmation": true,
+    "title": "self intention set ✨",
+    "infoText": "You're just a few steps away from deepening your relationship with Jesus.",
+    "imageName": "jesus-hand",
+    "doneButton": {
+      "text": "Show me the path",
+      "action": "NAVIGATE_NEXT_ONBOARDING_STEP"
+    },
+    "tracking": {
+      "screenViewEvent": "onboarding_self_intention_confirmation_viewed"
+    }
+  }
+} 

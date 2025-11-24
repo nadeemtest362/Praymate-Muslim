@@ -1,0 +1,70 @@
+{
+  "cli": {
+    "version": ">= 10.0.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "simulator": false
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "development-simulator": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "simulator": true
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "ios": {
+        "simulator": false,
+        "resourceClass": "m-medium"
+      },
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_APP_VARIANT": "preview",
+        "EXPO_NEW_ARCH_ENABLED": "false",
+        "EXPO_PUBLIC_SUPABASE_URL": "https://kfrvxoxdehduqrpcbibl.supabase.co",
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtmcnZ4b3hkZWhkdXFycGNiaWJsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzQwNjY0OTgsImV4cCI6MjA0OTY0MjQ5OH0.8G_zF_KzqrGScwZexygZiYZprVWePIvq3M8v3qhiuoM"
+      },
+      "channel": "preview"
+    },
+    "preview-simulator": {
+      "distribution": "internal",
+      "ios": {
+        "simulator": true
+      },
+      "developmentClient": true
+    },
+    "production": {
+      "ios": {
+        "buildConfiguration": "Release",
+        "image": "latest"
+      },
+      "autoIncrement": true,
+      "channel": "production",
+      "env": {
+        "EXPO_PUBLIC_APP_VARIANT": "production",
+        "EXPO_NEW_ARCH_ENABLED": "false",
+        "EXPO_PUBLIC_SUPABASE_URL": "https://kfrvxoxdehduqrpcbibl.supabase.co",
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtmcnZ4b3hkZWhkdXFycGNiaWJsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzQwNjY0OTgsImV4cCI6MjA0OTY0MjQ5OH0.8G_zF_KzqrGScwZexygZiYZprVWePIvq3M8v3qhiuoM"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "ascAppId": "6747301595"
+      }
+    }
+  }
+} 

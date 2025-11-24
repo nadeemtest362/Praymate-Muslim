@@ -1,0 +1,17 @@
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    "skipLibCheck": true,
+    "baseUrl": "src",
+    "paths": {
+      "@features/*": ["features/*"],
+      "@shared/*": ["shared/*"],
+      "@components/*": ["components/*"]
+    }
+  },
+  "exclude": [
+    "services/**/*",
+    "supabase/functions/**/*"
+  ]
+} 

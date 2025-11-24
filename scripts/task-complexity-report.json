@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "generatedAt": "2025-04-23T21:31:03.894Z",
+    "tasksAnalyzed": 8,
+    "thresholdScore": 5,
+    "projectName": "Your Project Name",
+    "usedResearch": false
+  },
+  "complexityAnalysis": [
+    {
+      "taskId": 3,
+      "taskTitle": "Authentication System Implementation",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the Supabase authentication implementation into specific subtasks covering setup, UI components, context creation, session management, and protected routes",
+      "reasoning": "This task involves multiple interconnected components including Supabase integration, context API implementation, UI development for login flows, and secure session management. The complexity comes from ensuring secure authentication practices and handling various edge cases like token refreshing and session expiration."
+    },
+    {
+      "taskId": 4,
+      "taskTitle": "Onboarding Flow Development",
+      "complexityScore": 8,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Divide the 11-screen onboarding flow into logical groups of screens with shared functionality, then add subtasks for navigation system, state management, and data persistence",
+      "reasoning": "With 11 different screens, complex state management using Zustand, animations, and data persistence requirements, this task has significant complexity. The need to design for future A/B testing adds another layer of complexity requiring careful architecture decisions."
+    },
+    {
+      "taskId": 5,
+      "taskTitle": "AI Prayer Generation System",
+      "complexityScore": 9,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the AI prayer generation system into subtasks covering Edge Function creation, OpenAI integration, batch generation logic, caching mechanisms, and error handling",
+      "reasoning": "This task involves complex integration with OpenAI's API via Supabase Edge Functions, implementing sophisticated prompt engineering, batch processing, caching mechanisms, and error handling. The core functionality of the app depends on this system working reliably, adding to its criticality and complexity."
+    },
+    {
+      "taskId": 6,
+      "taskTitle": "Core App Screens and Prayer Viewing",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Divide the core app screens development into logical UI components, feedback mechanisms, streak tracking system, and sharing functionality",
+      "reasoning": "This task involves building the main user-facing screens with multiple interactive components like the prayer display, feedback mechanism, streak tracking, and sharing features. The UI requirements include animations and different states (morning/night), adding to the complexity."
+    },
+    {
+      "taskId": 7,
+      "taskTitle": "Subscription and Paywall Integration",
+      "complexityScore": 8,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down the subscription system into subtasks covering Adapty SDK integration, paywall UI implementation, purchase flow handling, and subscription status management",
+      "reasoning": "Implementing a payment system requires careful integration with Adapty SDK, handling complex purchase flows, receipt validation, and platform-specific requirements. The A/B testing capability adds another layer of complexity, and errors in this system directly impact revenue."
+    },
+    {
+      "taskId": 8,
+      "taskTitle": "Notification System Implementation",
+      "complexityScore": 6,
+      "recommendedSubtasks": 3,
+      "expansionPrompt": "Divide the notification system into subtasks covering permission handling, scheduling logic, and user preference management",
+      "reasoning": "While notifications involve platform-specific code and permission handling, Expo Notifications provides a good abstraction layer. The complexity comes from managing scheduled notifications and handling user preference changes, but the scope is more contained than other tasks."
+    },
+    {
+      "taskId": 9,
+      "taskTitle": "Analytics Implementation",
+      "complexityScore": 6,
+      "recommendedSubtasks": 3,
+      "expansionPrompt": "Break down the analytics implementation into subtasks covering event tracking service, Adapty integration, and dashboard creation",
+      "reasoning": "This task requires implementing standardized event tracking across multiple app features and integrating with external systems. The complexity is moderate as it involves mostly adding tracking calls at key user interaction points and setting up a data pipeline to BigQuery."
+    },
+    {
+      "taskId": 10,
+      "taskTitle": "Error Handling and Offline Support",
+      "complexityScore": 8,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Divide the error handling and offline support into subtasks covering offline caching, fallback mechanisms, error boundaries, network monitoring, and app store preparation",
+      "reasoning": "This task involves implementing robust error handling across the entire app, offline support with caching, and finalizing the app for production. The comprehensive nature of this task touching many components and its critical role in ensuring app reliability contribute to its high complexity."
+    }
+  ]
+}

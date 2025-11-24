@@ -1,0 +1,75 @@
+{
+  "screenType": "ConsentScreen",
+  "description": "Configuration for the privacy consent screen.",
+  "configSchema": {
+    "logo": {
+      "text": "string",
+      "accent": "string",
+      "emoji": "string"
+    },
+    "title": "string",
+    "subtitle": "string",
+    "consentPoints": [
+      {
+        "icon": {
+          "type": "string",
+          "name": "string"
+        },
+        "text": "string"
+      }
+    ],
+    "acceptButton": {
+      "text": "string",
+      "action": "string",
+      "navigateTo": "string"
+    },
+    "declineAction": {
+      "type": "string",
+      "messageTitle": "string",
+      "messageBody": "string",
+      "navigateTo": "string"
+    },
+    "tracking": {
+      "screenViewEvent": "string",
+      "consentAcceptedEvent": "string",
+      "consentDeclinedEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "logo": {
+      "text": "personal",
+      "accent": "prayers",
+      "emoji": "🙏"
+    },
+    "title": "privacy & your prayers",
+    "subtitle": "important info about how your data is used",
+    "consentPoints": [
+      {
+        "icon": { "type": "MaterialCommunityIcons", "name": "lock-check-outline" },
+        "text": "Your prayers are personal. We use AI to help craft them based on your input, but they are not stored long-term or linked to your identity after processing."
+      },
+      {
+        "icon": { "type": "MaterialCommunityIcons", "name": "brain" },
+        "text": "To improve the prayer generation, anonymized and aggregated data about prayer themes and structures might be used for training purposes. No personal details are included."
+      },
+      {
+        "icon": { "type": "MaterialCommunityIcons", "name": "shield-account-outline" },
+        "text": "You own your prayers. We don't share your specific prayer text with third parties, except the AI providers needed to generate the prayer."
+      },
+      {
+        "icon": { "type": "MaterialCommunityIcons", "name": "cog-outline" },
+        "text": "You can manage your data and preferences in the app settings at any time."
+      }
+    ],
+    "acceptButton": {
+      "text": "i understand & accept",
+      "action": "ACCEPT_CONSENT_AND_NAVIGATE",
+      "navigateTo": "/onboarding/spinner"
+    },
+    "tracking": {
+      "screenViewEvent": "onboarding_consent_viewed",
+      "consentAcceptedEvent": "onboarding_consent_accepted",
+      "consentDeclinedEvent": "onboarding_consent_declined"
+    }
+  }
+} 

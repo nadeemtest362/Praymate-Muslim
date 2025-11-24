@@ -1,0 +1,206 @@
+{
+  "exampleConfig": {
+    "title": "Transform Your Prayer Life With justpray🙏 Daily ",
+    "subtitle": "Grow closer to God in just 3 minutes a day",
+    "backgroundGradient": [
+      "#1A1B4B",
+      "#2D1B69",
+      "#4A4E83",
+      "#6B7DB8"
+    ],
+    "logo": {
+      "emoji": "🙏",
+      "size": 48
+    },
+    "pricing": {
+      "mainOffer": "Choose Your Prayer Plan",
+      "description": "Select the option that works best for you"
+    },
+    "features": [
+      {
+        "id": "personalized_prayers",
+        "icon": "heart-circle",
+        "title": "Your Personal Prayer Experience",
+        "description": "Prayers crafted for your life, your people, your spiritual needs"
+      },
+      {
+        "id": "daily_guidance",
+        "icon": "white-balance-sunny",
+        "title": "Daily Spiritual Guidance",
+        "description": "Morning & evening prayers that evolve with your journey"
+      },
+      {
+        "id": "growth_tracking",
+        "icon": "trending-up",
+        "title": "Watch Your Faith Flourish",
+        "description": "Track your spiritual growth over your 30-day commitment"
+      },
+      {
+        "id": "prayer_community",
+        "icon": "account-group",
+        "title": "Pray for Those You Love",
+        "description": "Keep your loved ones in your daily prayers with personalized intentions"
+      },
+      {
+        "id": "unlimited_support",
+        "icon": "infinity",
+        "title": "Unlimited Prayer Support",
+        "description": "New prayers whenever you need them, adapted to your life changes"
+      }
+    ],
+    "cta": {
+      "text": "Continue",
+      "gradient": [
+        "#FFD700",
+        "#FF8C42"
+      ]
+    },
+    "alternatives": {
+      "viewAllPlans": {
+        "enabled": true,
+        "text": "No thanks, just take me to my prayer for now"
+      },
+      "fineprint": {
+        "enabled": true,
+        "text": "Choose between weekly or annual billing. Cancel anytime in settings."
+      }
+    },
+    "tracking": {
+      "screenViewEvent": "first_paywall_viewed",
+      "ctaTappedEvent": "first_paywall_trial_started",
+      "viewAllPlansTappedEvent": "first_paywall_view_plans_tapped"
+    }
+  },
+  "schema": {
+    "title": {
+      "type": "string",
+      "description": "Main title shown above the pricing offer"
+    },
+    "subtitle": {
+      "type": "string", 
+      "description": "Optional subtitle for additional context"
+    },
+    "backgroundGradient": {
+      "type": "array",
+      "description": "Array of hex color strings for the background gradient",
+      "items": {
+        "type": "string"
+      }
+    },
+    "logo": {
+      "type": "object",
+      "properties": {
+        "emoji": {
+          "type": "string",
+          "description": "Emoji to display as the logo"
+        },
+        "size": {
+          "type": "number",
+          "description": "Font size for the logo emoji"
+        }
+      }
+    },
+    "pricing": {
+      "type": "object",
+      "properties": {
+        "mainOffer": {
+          "type": "string",
+          "description": "Main pricing offer text (large, bold)"
+        },
+        "description": {
+          "type": "string",
+          "description": "Additional pricing details and terms"
+        }
+      }
+    },
+    "features": {
+      "type": "array",
+      "description": "List of features/benefits to display",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the feature"
+          },
+          "icon": {
+            "type": "string",
+            "description": "MaterialCommunityIcons icon name"
+          },
+          "title": {
+            "type": "string", 
+            "description": "Feature title"
+          },
+          "description": {
+            "type": "string",
+            "description": "Feature description"
+          }
+        }
+      }
+    },
+    "cta": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Call-to-action button text"
+        },
+        "gradient": {
+          "type": "array",
+          "description": "Gradient colors for the CTA button",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "alternatives": {
+      "type": "object",
+      "properties": {
+        "viewAllPlans": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "description": "Whether to show the view all plans link"
+            },
+            "text": {
+              "type": "string",
+              "description": "Text for the view all plans link"
+            }
+          }
+        },
+        "fineprint": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "description": "Whether to show fineprint text"
+            },
+            "text": {
+              "type": "string",
+              "description": "Legal/fineprint text"
+            }
+          }
+        }
+      }
+    },
+    "tracking": {
+      "type": "object",
+      "properties": {
+        "screenViewEvent": {
+          "type": "string",
+          "description": "Analytics event for screen view"
+        },
+        "ctaTappedEvent": {
+          "type": "string", 
+          "description": "Analytics event for CTA button tap"
+        },
+        "viewAllPlansTappedEvent": {
+          "type": "string",
+          "description": "Analytics event for view all plans tap"
+        }
+      }
+    }
+  }
+} 

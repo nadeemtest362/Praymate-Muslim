@@ -1,0 +1,76 @@
+{
+  "screenType": "PrayerCardCoverScreen",
+  "description": "Displays an engaging prayer card cover with faith-appropriate imagery and subtle animations before the first paywall.",
+  "configSchema": {
+    "title": "string",
+    "subtitle": "string",
+    "backgroundGradient": ["string"],
+    "card": {
+      "title": "string",
+      "subtitle": "string",
+      "shadowColor": "string",
+      "shadowOpacity": "number",
+      "borderRadius": "number"
+    },
+    "faithImagery": {
+      "enabled": "boolean",
+      "style": "string"
+    },
+    "avatars": {
+      "enabled": "boolean",
+      "maxVisible": "number",
+      "size": "number",
+      "borderColor": "string"
+    },
+    "animation": {
+      "type": "string",
+      "duration": "number",
+      "intensity": "number"
+    },
+    "cta": {
+      "text": "string",
+      "style": "string",
+      "gradient": ["string"]
+    },
+    "tracking": {
+      "screenViewEvent": "string",
+      "cardTappedEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "title": "Your Prayer Is Ready",
+    "subtitle": "A personalized spiritual experience crafted just for you",
+    "backgroundGradient": ["#1A1B4B", "#2D1B69", "#4A4E83", "#6B7DB8"],
+    "card": {
+      "title": "{timeOfDay} Prayer",
+      "subtitle": "Inspired by {faithTradition} wisdom",
+      "shadowColor": "#000000",
+      "shadowOpacity": 0.25,
+      "borderRadius": 16
+    },
+    "faithImagery": {
+      "enabled": true,
+      "style": "subtle"
+    },
+    "avatars": {
+      "enabled": true,
+      "maxVisible": 4,
+      "size": 50,
+      "borderColor": "#FFD700"
+    },
+    "animation": {
+      "type": "glow",
+      "duration": 2000,
+      "intensity": 0.3
+    },
+    "cta": {
+      "text": "Reveal My Prayer",
+      "style": "primary",
+      "gradient": ["#FFD700", "#FF8C42"]
+    },
+    "tracking": {
+      "screenViewEvent": "prayer_card_cover_viewed",
+      "cardTappedEvent": "prayer_card_tapped"
+    }
+  }
+} 

@@ -1,0 +1,74 @@
+{
+  "screenType": "AddIntentionScreen",
+  "description": "Configuration for adding a personal prayer intention for the user themselves during onboarding.",
+  "configSchema": {
+    "isForSelfIntention": "boolean",
+    "intentionCollectionPhase": {
+      "introTitle": "string",
+      "introSubtitle": "string",
+      "intentionPrompt": {
+        "titleTemplate": "string",
+        "categorySelectorLabel": "string",
+        "detailsInputPlaceholder": "string",
+        "madlibConnectorNeeds": "string",
+        "madlibConnectorFor": "string",
+        "madlibPlaceholderWhat": "string",
+        "madlibPlaceholderDetails": "string"
+      },
+      "finishButtonText": "string",
+      "displayedCategoryIds": [
+        "string"
+      ]
+    },
+    "alerts": {
+      "missingNeedError": "string",
+      "missingDetailsError": "string",
+      "genericSaveError": "string"
+    },
+    "tracking": {
+      "screenViewEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "isForSelfIntention": true,
+    "intentionCollectionPhase": {
+      "introTitle": "what should your 🙏 personal prayers focus on first?",
+      "introSubtitle": "define a primary intention for your own prayers.",
+      "intentionPrompt": {
+        "titleTemplate": "My prayer focus is...",
+        "categorySelectorLabel": "Select a category for your focus:",
+        "detailsInputPlaceholder": "Add specific details or thoughts...",
+        "madlibConnectorNeeds": "focus on",
+        "madlibConnectorFor": "regarding",
+        "madlibPlaceholderWhat": "category...",
+        "madlibPlaceholderDetails": "details..."
+      },
+      "finishButtonText": "Save & Continue",
+      "displayedCategoryIds": [
+        "healing",
+        "peace",
+        "protection",
+        "guidance",
+        "wisdom",
+        "strength",
+        "faith",
+        "love",
+        "forgiveness",
+        "joy",
+        "comfort",
+        "gratitude",
+        "financialHelp",
+        "blessing",
+        "other"
+      ]
+    },
+    "alerts": {
+      "missingNeedError": "Please select a prayer category for your focus.",
+      "missingDetailsError": "Please add a few details for your prayer focus.",
+      "genericSaveError": "Oops! Could not save this intention. Please try again."
+    },
+    "tracking": {
+      "screenViewEvent": "onboarding_add_self_intention_viewed"
+    }
+  }
+} 

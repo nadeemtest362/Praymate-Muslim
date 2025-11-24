@@ -1,0 +1,71 @@
+{
+  "screenType": "AddIntentionScreen",
+  "description": "Configuration for collecting initial prayer intentions for selected people during onboarding.",
+  "configSchema": {
+    "intentionCollectionPhase": {
+      "introTitle": "string",
+      "introSubtitle": "string",
+      "intentionPrompt": {
+        "titleTemplate": "string",
+        "categorySelectorLabel": "string",
+        "detailsInputPlaceholder": "string",
+        "madlibConnectorNeeds": "string",
+        "madlibConnectorFor": "string",
+        "madlibPlaceholderWhat": "string",
+        "madlibPlaceholderDetails": "string"
+      },
+      "nextButtonText": "string",
+      "finishButtonText": "string",
+      "displayedCategoryIds": [
+        "string"
+      ]
+    },
+    "alerts": {
+      "missingNeedError": "string",
+      "missingDetailsError": "string",
+      "genericSaveError": "string"
+    },
+    "tracking": {
+      "screenViewEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "alerts": {
+      "genericSaveError": "Oops! Could not save this intention. Please try again.",
+      "missingNeedError": "Please select a prayer category first.",
+      "missingDetailsError": "Please add a few details for this prayer."
+    },
+                "tracking": {
+        "screenViewEvent": "onboarding_add_intention_viewed"
+      },
+      "intentionCollectionPhase": {
+        "introTitle": "what's on your ❤️ for {personName}?",
+        "introSubtitle": "Let's add a starting prayer focus for each person you've added.",
+        "nextButtonText": "Next Person",
+        "intentionPrompt": {
+          "titleTemplate": "What is your prayer for {personName}?",
+          "madlibConnectorFor": "for",
+          "madlibConnectorNeeds": "needs",
+          "categorySelectorLabel": "Select a starting category:",
+          "madlibPlaceholderWhat": "what...",
+          "detailsInputPlaceholder": "Add a few words about this prayer focus...",
+          "madlibPlaceholderDetails": "details..."
+        },
+      "finishButtonText": "Finish & Continue",
+      "displayedCategoryIds": [
+        "healing",
+        "peace",
+        "protection",
+        "guidance",
+        "wisdom",
+        "strength",
+        "faith",
+        "love",
+        "forgiveness",
+        "joy",
+        "financialHelp",
+        "gratitude"
+      ]
+    }
+  }
+} 

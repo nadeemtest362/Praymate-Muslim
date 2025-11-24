@@ -1,0 +1,84 @@
+{
+  "screenType": "FirstPrayerDisplayScreen",
+  "description": "Configuration for displaying the user's first generated prayer, mirroring in-app display.",
+  "configSchema": {
+    "logo": {
+      "text": "string",
+      "accent": "string",
+      "emoji": "string"
+    },
+    "title": "string",
+    "subtitle": "string",
+    "prayerDisplay": {
+      "placeholderText": "string",
+      "isEditable": "boolean"
+    },
+    "verseDisplay": {
+      "text": "string",
+      "reference": "string"
+    },
+    "actions": [
+      {
+        "id": "string",
+        "text": "string",
+        "icon": {
+          "type": "string",
+          "name": "string"
+        },
+        "styleType": "string",
+        "actionCommand": "string",
+        "navigateTo": "string"
+      }
+    ],
+    "tracking": {
+      "screenViewEvent": "string",
+      "actionExecutedEventPrefix": "string"
+    },
+    "errorMessages": {
+        "shareError": "string",
+        "genericError": "string"
+    }
+  },
+  "exampleConfig": {
+    "logo": {
+      "text": "personal",
+      "accent": "prayers",
+      "emoji": "🙏"
+    },
+    "title": "Your First Prayer",
+    "subtitle": "Here's a starting point from your heart to God's ears. You can reflect on it or edit if you wish.",
+    "prayerDisplay": {
+      "placeholderText": "Loading your prayer...",
+      "isEditable": true
+    },
+    "verseDisplay": {
+      "text": "For I know the plans I have for you, declares the LORD, plans to prosper you and not to harm you, plans to give you hope and a future.",
+      "reference": "Jeremiah 29:11"
+    },
+    "actions": [
+      {
+        "id": "continue_to_commitment",
+        "text": "This is a good start",
+        "icon": { "type": "MaterialCommunityIcons", "name": "check-circle-outline" },
+        "styleType": "PRIMARY",
+        "actionCommand": "NAVIGATE_NEXT",
+        "navigateTo": "/onboarding/commitment-q"
+      },
+      {
+        "id": "share",
+        "text": "Share",
+        "icon": { "type": "MaterialCommunityIcons", "name": "share-variant-outline" },
+        "styleType": "SECONDARY",
+        "actionCommand": "SHARE_PRAYER_CONTENT"
+      }
+    ],
+    "tracking": {
+      "screenViewEvent": "onboarding_firstprayer_viewed",
+      "actionExecutedEventPrefix": "onboarding_firstprayer_action_"
+    },
+    "errorMessages": {
+        "shareError": "Could not share the prayer at this time.",
+        "genericError": "An unexpected error occurred."
+    }
+  }
+} 

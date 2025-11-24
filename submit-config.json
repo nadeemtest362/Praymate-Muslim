@@ -1,0 +1,12 @@
+{
+  "usesNonExemptEncryption": false,
+  "usesIdfa": false,
+  "contentRights": {
+    "usesThirdPartyContent": false
+  },
+  "exportComplianceInformation": {
+    "usesEncryption": false,
+    "encryptionUpdated": false,
+    "exemptionType": "none"
+  }
+}

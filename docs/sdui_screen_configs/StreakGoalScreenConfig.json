@@ -1,0 +1,62 @@
+{
+  "screenType": "StreakGoalScreen",
+  "description": "Allows users to set a prayer streak goal.",
+  "configSchema": {
+    "title": "string",
+    "subtitle": "string",
+    "goalOptions": [
+      {
+        "id": "string",
+        "daysText": "string",
+        "emoji": "string",
+        "primaryText": "string",
+        "value": "number"
+      }
+    ],
+    "continueButton": {
+      "text": "string",
+      "action": "string",
+      "navigateTo": "string"
+    },
+    "tracking": {
+      "screenViewEvent": "string",
+      "goalSelectedEventPrefix": "string"
+    }
+  },
+  "exampleConfig": {
+    "title": "🗓️ set a prayer streak goal",
+    "subtitle": "people who pick a daily prayer goal are 3-4x more likely to make prayer a daily habit!",
+    "tracking": {
+      "screenViewEvent": "onboarding_streakgoal_viewed",
+      "goalSelectedEventPrefix": "onboarding_streakgoal_selected_"
+    },
+    "goalOptions": [
+      {
+        "id": "7_days",
+        "emoji": "🙏",
+        "value": 7,
+        "daysText": "7 Days",
+        "primaryText": "Start simple for a quick win!"
+      },
+      {
+        "id": "14_days",
+        "emoji": "🙏🙏",
+        "value": 14,
+        "daysText": "14 Days",
+        "primaryText": "Build momentum over two weeks."
+      },
+      {
+        "id": "30_days",
+        "emoji": "🙏🙏🙏",
+        "value": 30,
+        "daysText": "30 Days",
+        "primaryText": "Go all-in for a deeper faith habit."
+      }
+    ],
+    "continueButton": {
+      "text": "Continue",
+      "action": "SAVE_STREAK_GOAL_AND_NAVIGATE",
+      "navigateTo": "/onboarding/benefits"
+    }
+  }
+} 

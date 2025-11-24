@@ -1,0 +1,50 @@
+{
+  "screenType": "FaithTraditionScreen",
+  "description": "Allows users to specify their faith tradition to customize prayer content.",
+  "configSchema": {
+    "question": "string",
+    "subtitle": "string",
+    "options": [
+      {
+        "id": "string",
+        "text": "string",
+        "emoji": "string (optional)",
+        "action": "string",
+        "responseValue": "string"
+      }
+    ],
+    "infoText": "string",
+    "tracking": {
+      "screenViewEvent": "string",
+      "optionSelectedEventPrefix": "string"
+    }
+  },
+  "exampleConfig": {
+    "question": "🙏 which faith tradition do you follow?",
+    "subtitle": "This guides the spiritual style of your prayers",
+    "options": [
+      {
+        "id": "christian_non_catholic",
+        "text": "Christian (Non-Catholic)",
+        "action": "SAVE_RESPONSE_AND_NAVIGATE_NEXT",
+        "responseValue": "christian_non_catholic"
+      },
+      {
+        "id": "catholic",
+        "text": "Catholic",
+        "action": "SAVE_RESPONSE_AND_NAVIGATE_NEXT",
+        "responseValue": "catholic"
+      },
+      {
+        "id": "other",
+        "text": "Other",
+        "action": "SAVE_RESPONSE_AND_NAVIGATE_NEXT",
+        "responseValue": "other"
+      }
+    ],
+    "tracking": {
+      "screenViewEvent": "onboarding_faith_tradition_viewed",
+      "optionSelectedEventPrefix": "onboarding_faith_tradition_selected_"
+    }
+  }
+} 

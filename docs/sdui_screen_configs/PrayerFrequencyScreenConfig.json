@@ -1,0 +1,47 @@
+{
+  "exampleConfig": {
+    "question": "How often do you find yourself in prayer these days?",
+    "options": [
+      {
+        "id": "multiple_daily",
+        "text": "Multiple times a day",
+        "emoji": "⭐",
+        "action": "SAVE_RESPONSE_AND_NAVIGATE_NEXT",
+        "responseValue": "multiple_daily"
+      },
+      {
+        "id": "daily",
+        "text": "About once a day",
+        "emoji": "🌅",
+        "action": "SAVE_RESPONSE_AND_NAVIGATE_NEXT",
+        "responseValue": "daily"
+      },
+      {
+        "id": "few_times_week",
+        "text": "A few times a week",
+        "emoji": "📅",
+        "action": "SAVE_RESPONSE_AND_NAVIGATE_NEXT",
+        "responseValue": "few_times_week"
+      },
+      {
+        "id": "occasionally",
+        "text": "Only during important moments",
+        "emoji": "🙏",
+        "action": "SAVE_RESPONSE_AND_NAVIGATE_NEXT",
+        "responseValue": "occasionally"
+      },
+      {
+        "id": "rarely",
+        "text": "Rarely, but wanting to start",
+        "emoji": "✨",
+        "action": "SAVE_RESPONSE_AND_NAVIGATE_NEXT",
+        "responseValue": "rarely"
+      }
+    ],
+    "tracking": {
+      "screenViewEvent": "onboarding_prayer_frequency_screen_viewed",
+      "optionSelectedEventPrefix": "onboarding_prayer_frequency_option_"
+    },
+    "questionType": "prayerFrequency"
+  }
+} 

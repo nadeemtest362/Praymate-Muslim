@@ -1,0 +1,168 @@
+{
+  "screenType": "PrayerPeopleCollectionScreen",
+  "description": "Configuration for the multi-phase process of adding prayer focus people.",
+  "configSchema": {
+    "title": "string",
+    "subtitleTemplate": "string",
+    "maxPeople": "number",
+    "emptyState": {
+      "icon": { "type": "string", "name": "string" },
+      "text": "string"
+    },
+    "contactsAccessPrompt": {
+      "imageName": "string",
+      "title": "string",
+      "bodyText": "string",
+      "manualAddButtonText": "string",
+      "allowButtonText": "string"
+    },
+    "contactPicker": {
+      "title": "string",
+      "searchInputPlaceholder": "string",
+      "doneButtonText": "string",
+      "emptySearchText": "string",
+      "emptyListText": "string"
+    },
+    "manualAdd": {
+      "quickAddTitle": "string",
+      "relationshipChipsTitle": "string",
+      "relationshipOptions": [
+        { "id": "string", "label": "string", "needsCustomName": "boolean" }
+      ],
+      "customNamePromptTemplate": "string",
+      "customNameInputPlaceholder": "string",
+      "customNameAddButtonText": "string",
+      "customNameCancelButtonText": "string",
+      "generalCancelButtonText": "string"
+    },
+    "miniProfile": {
+      "titleTemplate": "string",
+      "relationshipSectionTitle": "string",
+      "pronounSectionTitleTemplate": "string",
+      "pronounOptions": [
+        { "id": "string", "label": "string" }
+      ],
+      "cancelButtonText": "string",
+      "addButtonText": "string"
+    },
+    "peopleCollectionPhase": {
+        "encouragementMessageWhenMaxReached": {
+            "textTemplate": "string"
+        },
+        "mainActionButtonsWhenNotMax": {
+            "addFromContactsText": "string",
+            "addFromContactsIcon": { "type": "string", "name": "string" },
+            "quickAddText": "string",
+            "quickAddIcon": { "type": "string", "name": "string" }
+        }
+    },
+    "finalContinueButton": {
+      "text": "string",
+      "icon": { "type": "string", "name": "string" },
+      "action": "string",
+      "navigateTo": "string"
+    },
+    "alerts": {
+      "limitReachedTitle": "string",
+      "limitReachedMessageTemplate": "string",
+      "addSomeoneFirstTitle": "string",
+      "addSomeoneFirstMessage": "string",
+      "contactsAccessDeniedTitle": "string",
+      "contactsAccessDeniedMessage": "string",
+      "noContactsFoundTitle": "string",
+      "noContactsFoundMessage": "string",
+      "genericErrorTitle": "string",
+      "genericErrorMessage": "string"
+    },
+    "tracking": {
+      "screenViewEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "title": "who's on your ❤️ right now?",
+    "subtitleTemplate": "add up to {maxPeople} people or groups to your upcoming personal prayers 👇",
+    "maxPeople": 3,
+    "emptyState": {
+      "icon": { "type": "MaterialCommunityIcons", "name": "account-plus" },
+      "text": "tap to add your first person"
+    },
+    "contactsAccessPrompt": {
+      "imageName": "community",
+      "title": "Access your contacts",
+      "bodyText": "Find people you care about from your address book to add to your prayers",
+      "manualAddButtonText": "Add Manually",
+      "allowButtonText": "Allow"
+    },
+    "contactPicker": {
+      "title": "Select People",
+      "searchInputPlaceholder": "Search contacts...",
+      "doneButtonText": "Done",
+      "emptySearchText": "No matching contacts found",
+      "emptyListText": "No contacts to show"
+    },
+    "manualAdd": {
+      "quickAddTitle": "who would you like to add? 🙌",
+      "relationshipChipsTitle": "Quick Add:",
+      "relationshipOptions": [
+        { "id": "mom", "label": "Mom", "needsCustomName": false },
+        { "id": "dad", "label": "Dad", "needsCustomName": false },
+        { "id": "wife", "label": "Wife", "needsCustomName": false },
+        { "id": "husband", "label": "Husband", "needsCustomName": false },
+        { "id": "my_church", "label": "My Church", "needsCustomName": false },
+        { "id": "my_community", "label": "My Community", "needsCustomName": false },
+        { "id": "friend", "label": "Friend", "needsCustomName": true },
+        { "id": "custom", "label": "Someone Else", "needsCustomName": true }
+      ],
+      "customNamePromptTemplate": "What's your {relationshipLabel}'s name?",
+      "customNameInputPlaceholder": "Enter their name...",
+      "customNameAddButtonText": "add",
+      "customNameCancelButtonText": "back",
+      "generalCancelButtonText": "cancel"
+    },
+    "miniProfile": {
+      "titleTemplate": "who is {personName} to you?",
+      "relationshipSectionTitle": "Relationship",
+      "pronounSectionTitleTemplate": "How should we refer to {personName}?",
+      "pronounOptions": [
+        { "id": "he", "label": "He/Him" },
+        { "id": "she", "label": "She/Her" },
+        { "id": "they", "label": "They/Them" },
+        { "id": "name", "label": "Just use name" }
+      ],
+      "cancelButtonText": "Cancel",
+      "addButtonText": "Add Person"
+    },
+    "peopleCollectionPhase": {
+        "encouragementMessageWhenMaxReached": {
+            "textTemplate": "perfect! you've selected {count} people. ❤️ (you can always add more later)"
+        },
+        "mainActionButtonsWhenNotMax": {
+            "addFromContactsText": "add from contacts",
+            "addFromContactsIcon": { "type": "MaterialCommunityIcons", "name": "account-group" },
+            "quickAddText": "quick add",
+            "quickAddIcon": { "type": "MaterialCommunityIcons", "name": "account-plus" }
+        }
+    },
+    "finalContinueButton": {
+      "text": "Done Adding People",
+      "icon": { "type": "MaterialCommunityIcons", "name": "arrow-right-bold-circle" },
+      "action": "NAVIGATE_NEXT",
+      "navigateTo": ""
+    },
+    "alerts": {
+      "limitReachedTitle": "Limit Reached",
+      "limitReachedMessageTemplate": "You can add up to {maxPeople} people.",
+      "addSomeoneFirstTitle": "Add someone first",
+      "addSomeoneFirstMessage": "Add at least one person to continue.",
+      "contactsAccessDeniedTitle": "Contacts Access Denied",
+      "contactsAccessDeniedMessage": "To add from contacts, please enable access in your device settings.",
+      "noContactsFoundTitle": "No Contacts Found",
+      "noContactsFoundMessage": "We couldn't find any contacts. You can add people manually instead.",
+      "genericErrorTitle": "Error",
+      "genericErrorMessage": "Could not perform action. Please try again."
+    },
+    "tracking": {
+      "screenViewEvent": "onboarding_prayerpeople_viewed"
+    }
+  }
+} 

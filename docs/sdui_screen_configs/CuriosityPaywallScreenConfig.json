@@ -1,0 +1,121 @@
+{
+  "screenType": "CuriosityPaywallScreen",
+  "description": "First paywall focusing on curiosity and anticipation, appearing after prayer cover reveal.",
+  "configSchema": {
+    "title": "string",
+    "subtitle": "string",
+    "backgroundGradient": ["string"],
+    "curiosityMessage": {
+      "headline": "string",
+      "description": "string",
+      "emphasis": "string"
+    },
+    "preview": {
+      "enabled": "boolean",
+      "type": "string",
+      "opacity": "number"
+    },
+    "urgency": {
+      "enabled": "boolean",
+      "type": "string",
+      "message": "string",
+      "countdown": "boolean"
+    },
+    "subscriptionOptions": [
+      {
+        "id": "string",
+        "title": "string",
+        "description": "string",
+        "price": "string",
+        "features": ["string"],
+        "recommended": "boolean",
+        "gradient": ["string"]
+      }
+    ],
+    "alternatives": {
+      "continueWithLimitations": {
+        "enabled": "boolean",
+        "text": "string",
+        "description": "string"
+      },
+      "restorePurchases": {
+        "enabled": "boolean",
+        "text": "string"
+      }
+    },
+    "tracking": {
+      "screenViewEvent": "string",
+      "subscriptionTappedEventPrefix": "string",
+      "continueWithLimitationsEvent": "string",
+      "restoreTappedEvent": "string"
+    }
+  },
+  "exampleConfig": {
+    "title": "Your Sacred Prayer Awaits",
+    "subtitle": "This personalized prayer contains wisdom specifically crafted for your spiritual journey",
+    "backgroundGradient": ["#1A1B4B", "#2D1B69", "#4A4E83", "#6B7DB8"],
+    "curiosityMessage": {
+      "headline": "✨ Discover What's Inside",
+      "description": "This prayer draws from {faithTradition} wisdom and includes personalized guidance for the {peopleCount} people closest to your heart.",
+      "emphasis": "Your spiritual journey is unique—your prayer should be too."
+    },
+    "preview": {
+      "enabled": true,
+      "type": "blurred",
+      "opacity": 0.3
+    },
+    "urgency": {
+      "enabled": true,
+      "type": "limited_time",
+      "message": "Special onboarding offer—unlock unlimited spiritual guidance",
+      "countdown": false
+    },
+    "subscriptionOptions": [
+      {
+        "id": "monthly",
+        "title": "Monthly Spiritual Growth",
+        "description": "Daily personalized prayers + unlimited access",
+        "price": "$9.99/month",
+        "features": [
+          "Unlimited personalized prayers",
+          "Daily spiritual insights",
+          "Prayer history & favorites",
+          "Offline access"
+        ],
+        "recommended": false,
+        "gradient": ["#4A4E83", "#6B7DB8"]
+      },
+      {
+        "id": "yearly",
+        "title": "Annual Spiritual Journey",
+        "description": "Complete spiritual guidance for your year ahead",
+        "price": "$79.99/year",
+        "features": [
+          "Everything in Monthly",
+          "Advanced spiritual insights",
+          "Priority support",
+          "Exclusive content"
+        ],
+        "recommended": true,
+        "gradient": ["#FFD700", "#FF8C42"]
+      }
+    ],
+    "alternatives": {
+      "continueWithLimitations": {
+        "enabled": true,
+        "text": "Continue with limitations",
+        "description": "Limited to 3 prayers per week"
+      },
+      "restorePurchases": {
+        "enabled": true,
+        "text": "Restore Previous Purchase"
+      }
+    },
+    "tracking": {
+      "screenViewEvent": "curiosity_paywall_viewed",
+      "subscriptionTappedEventPrefix": "curiosity_paywall_subscription_",
+      "continueWithLimitationsEvent": "curiosity_paywall_continue_limited",
+      "restoreTappedEvent": "curiosity_paywall_restore_tapped"
+    }
+  }
+} 

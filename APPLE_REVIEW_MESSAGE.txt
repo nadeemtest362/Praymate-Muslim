@@ -1,0 +1,28 @@
+Thank you for the detailed review. We appreciate your thoroughness and have addressed all issues:
+
+**Guideline 3.1.2 - Subscription Groups:**
+We've consolidated all active subscriptions into a single subscription group named "Praymate+". This group now contains both weekly subscription products currently offered in the app. All new subscribers will use this unified group, allowing seamless switching between subscription options as required.
+
+**Guideline 2.1 - Contacts Upload:**
+To clarify - the app does NOT upload contacts in bulk or automatically. When a user explicitly selects a person from their contacts to add to their prayer circle, we save: (1) that person's name, (2) their contact photo, and (3) a hashed phone number (SHA-256) if available - the hash creates a privacy-preserving identifier for that person in the user's prayer list (used for features like sharing prayers with that person later). Raw phone numbers are NEVER transmitted or stored on our servers. The entire contacts list is never uploaded, and this only happens when the user intentionally taps to add someone (not background syncing).
+
+**Guideline 3.1.2 - Subscription Metadata (EULA):**
+We've added Terms, Privacy, and EULA links to all subscription purchase screens. The EULA links point to Apple's standard End User License Agreement. We've also updated our App Description to reference these legal documents.
+
+**Guideline 3.1.2 - Subscription Marketing (Billed Amount):**
+We've redesigned the subscription purchase flow to ensure the billed amount is the most prominent element on screen. The actual price users will pay is now displayed in the largest, most visible text, with free trial information shown in a subordinate position as required by the guidelines.
+
+**Guideline 2.1 - In-App Purchase Products:**
+Regarding the "Product not available" error - we noticed the review was conducted on an iPad Air. Our app is designed as an iPhone-only application, and in-app purchases often fail when iPhone-only apps run on iPad in compatibility mode (this is a known StoreKit limitation). We respectfully request retesting on iPhone (iPhone 12 or later) where all subscriptions work correctly. All products are properly configured, available worldwide, and function perfectly on iPhone devices.
+
+NOTE: You will not need to complete the onboarding again - you can choose "I already have an account" option on launch screen and use the Apple Sign In option (since you already have an account).
+
+**Guideline 5.1.2 - App Tracking Transparency:**
+We apologize for the confusion with our App Privacy labels. We incorrectly categorized our analytics data collection as "tracking" when it should have been categorized as "data linked to you" for analytics purposes only. We've corrected this - PostHog is used solely for anonymous product analytics (understanding which features users engage with) to improve the app, NOT for advertising or sharing with data brokers. This does not constitute "tracking" under Apple's definition, so no ATT prompt is required. Our privacy labels now accurately reflect this.
+
+**Guideline 2.3.6 - Age Rating (In-App Controls):**
+The PRAYBLOCK feature is the "In-App Controls" referenced in our Age Rating. To access it during testing: From the Home screen, tap the lock icon in the top-right OR tap the "ENABLE PRAYBLOCK" card → Follow the setup flow → Grant Family Controls permission → Select apps to block. This feature uses Apple's Family Controls framework to help users voluntarily manage their device usage through faith-based motivation. Full testing instructions are in APPLE_REVIEWER_NOTES.md section 4.
+
+Please don't hesitate to reach out if you need any clarification or additional information.
+
+Thank you for your patience!

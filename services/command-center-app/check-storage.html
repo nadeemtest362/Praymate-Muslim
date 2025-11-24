@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check GTM Storage</title>
+</head>
+<body>
+    <h1>GTM Studio Storage Check</h1>
+    <p>Open this in your browser at http://localhost:5174 to see your stored data</p>
+    
+    <h2>Workflow Runs:</h2>
+    <pre id="runs"></pre>
+    
+    <h2>Run Count:</h2>
+    <pre id="count"></pre>
+    
+    <h2>All GTM-related Storage:</h2>
+    <pre id="all"></pre>
+    
+    <script>
+        // Get workflow runs
+        const runs = localStorage.getItem('gtm-workflow-runs');
+        document.getElementById('runs').textContent = runs ? JSON.stringify(JSON.parse(runs), null, 2) : 'No runs found';
+        
+        // Get run count
+        const count = localStorage.getItem('gtm-run-count');
+        document.getElementById('count').textContent = count || '0';
+        
+        // Get all GTM-related items
+        const gtmItems = {};
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key.includes('gtm') || key.includes('workflow')) {
+                try {
+                    gtmItems[key] = JSON.parse(localStorage.getItem(key));
+                } catch {
+                    gtmItems[key] = localStorage.getItem(key);
+                }
+            }
+        }
+        document.getElementById('all').textContent = JSON.stringify(gtmItems, null, 2);
+        
+        // Also check Supabase storage
+        console.log('Checking Supabase tables for generated content...');
+        console.log('Look for data in:');
+        console.log('- generated_images table');
+        console.log('- generated_videos table');
+        console.log('- viral_analyses table');
+    </script>
+</body>
+</html>
